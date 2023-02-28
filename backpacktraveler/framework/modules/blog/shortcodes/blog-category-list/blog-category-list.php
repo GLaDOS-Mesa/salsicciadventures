@@ -97,7 +97,7 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 			'title_tag'           => 'h4'
 		);
 		$params = shortcode_atts( $args, $atts );
-		var_dump($args);
+
         $query_array              = $this->getQueryArray( $params );
         $params['query_results']  = get_terms( $query_array );
 
