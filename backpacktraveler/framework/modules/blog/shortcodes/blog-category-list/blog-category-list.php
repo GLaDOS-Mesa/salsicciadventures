@@ -28,7 +28,7 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 							'type'        => 'dropdown',
 							'param_name'  => 'number_of_columns',
 							'heading'     => esc_html__( 'Number of Columns', 'backpacktraveler' ),
-							'value'       => array_flip( backpacktraveler_mikado_get_number_of_columns_array( true, array( 'one' ) ) ),
+							'value'       => array_flip( backpacktraveler_mikado_get_number_of_columns_array( true ) ),
 							'description' => esc_html__( 'Default value is Three', 'backpacktraveler' ),
 							'save_always' => true
 						),
@@ -88,9 +88,9 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 	
 	public function render( $atts, $content = null ) {
 		$args   = array(
-			'number_of_columns'   => 'six',
+			'number_of_columns'   => 'all',
 			'space_between_items' => 'normal',
-			'number_of_items'     => '6',
+			'number_of_items'     => '0',
 			'orderby'             => 'date',
 			'order'               => 'ASC',
 			'image_proportions'   => 'full',
@@ -98,7 +98,7 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 		);
 		$params = shortcode_atts( $args, $atts );
 
-        $query_array              = $this->getQueryArray( $params );
+		$query_array              = $this->getQueryArray( $params );
         $params['query_results']  = get_terms( $query_array );
 
 		$params['holder_classes'] = $this->getHolderClasses( $params, $args );

@@ -672,7 +672,8 @@ if ( ! function_exists( 'backpacktraveler_mikado_get_number_of_columns_array' ) 
 		$options['four']  = esc_html__( 'Four', 'backpacktraveler' );
 		$options['five']  = esc_html__( 'Five', 'backpacktraveler' );
 		$options['six']   = esc_html__( 'Six', 'backpacktraveler' );
-		
+		$options['all']   = esc_html__( 'All', 'backpacktraveler' );
+		asd
 		if ( ! empty( $removed_items ) ) {
 			foreach ( $removed_items as $removed_item ) {
 				unset( $options[ $removed_item ] );
