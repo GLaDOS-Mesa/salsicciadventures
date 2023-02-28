@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Blog responsive styles - begin
+   ========================================================================== */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .mkdf-header-vertical .mkdf-blog-holder.mkdf-blog-masonry .mkdf-item-space {
+    width: 33.3333% !important;
+  }
+  .mkdf-header-vertical .mkdf-blog-holder.mkdf-blog-masonry .mkdf-item-space:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-title {
+    padding: 5px 5% 0;
+  }
+  .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-excerpt-holder {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-title {
+    padding: 5px 17% 0;
+  }
+  .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-excerpt-holder {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-title {
+    padding: 5px 4% 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-title {
+    padding: 5px 3% 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-related-posts-holder .mkdf-related-post {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mkdf-related-posts-holder .mkdf-related-post {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-info-bottom .mkdf-post-info-bottom-left,
+  .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-info-bottom .mkdf-post-info-bottom-right {
+    width: 100%;
+    float: none;
+  }
+  .mkdf-blog-holder.mkdf-blog-single article .mkdf-post-info-bottom .mkdf-post-info-bottom-right {
+    text-align: inherit;
+    margin: 10px 0 0;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .mkdf-blog-slider-holder.mkdf-bs-slider .mkdf-item-text-holder {
+    padding: 50px 16% 85px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-blog-slider-holder.mkdf-bs-carousel-centered .active.center .mkdf-item-text-wrapper {
+    opacity: 1;
+  }
+  .mkdf-blog-slider-holder.mkdf-bs-slider .mkdf-item-content-right,
+  .mkdf-blog-slider-holder.mkdf-bs-slider .mkdf-item-text-wrapper {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Blog responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=blog-map-responsive.css.map */

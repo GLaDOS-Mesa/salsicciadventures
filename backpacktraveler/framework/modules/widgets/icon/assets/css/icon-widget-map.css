@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Icon widget style - begin
+   ========================================================================== */
+.mkdf-icon-widget-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  float: left;
+  text-align: center;
+  width: 33%;
+  margin-bottom: 25px;
+}
+
+.mkdf-icon-widget-holder:nth-of-type(4n) {
+  clear: both;
+}
+
+.mkdf-icon-widget-holder:hover .mkdf-icon-text {
+  color: #000000;
+}
+
+.mkdf-icon-widget-holder > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.mkdf-icon-widget-holder .mkdf-icon-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #959595;
+  letter-spacing: .33em;
+  font-size: 8px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+
+.mkdf-icon-widget-holder .mkdf-icon-text.mkdf-no-icon {
+  padding: 0;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder:hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ==========================================================================
+   Icon widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=icon-widget-map.css.map */

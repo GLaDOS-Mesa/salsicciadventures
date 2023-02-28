@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Author Info widget style - begin
+   ========================================================================== */
+.mkdf-author-info-widget {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.mkdf-author-info-widget .mkdf-aiw-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.mkdf-author-info-widget .mkdf-aiw-image img {
+  display: block;
+  padding: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  border-radius: 100%;
+}
+
+.mkdf-author-info-widget .mkdf-aiw-title {
+  margin: 23px 0 0;
+  display: block;
+  font-family: "EpicRide", serif;
+  font-size: 55px;
+  color: #000000;
+  line-height: 1em;
+}
+
+.mkdf-author-info-widget .mkdf-aiw-text {
+  display: block;
+  margin: 6px 0 0;
+}
+
+/* ==========================================================================
+   Author Info widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=author-info-widget-map.css.map */

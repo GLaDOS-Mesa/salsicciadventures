@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Content Bottom styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   #Content bottom styles - begin
+   ========================================================================== */
+.mkdf-content-bottom .mkdf-content-bottom-inner {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mkdf-content-bottom .mkdf-content-bottom-inner.mkdf-grid {
+  padding: 40px 0;
+}
+
+.mkdf-content-bottom .mkdf-content-bottom-inner.mkdf-full-width {
+  padding: 40px 0;
+  border-top: 1px solid #f3f3f3;
+}
+
+/* ==========================================================================
+   #Content bottom styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Content Bottom styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=content-bottom-map.css.map */

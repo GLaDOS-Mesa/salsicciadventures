@@ -1,0 +1,1 @@
+<div <?php echo backpacktraveler_mikado_get_inline_style($style); ?> class="mkdf-blog-fullwidth-featured-image-holder"></div>

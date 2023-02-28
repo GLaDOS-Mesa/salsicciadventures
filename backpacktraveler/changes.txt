@@ -1,0 +1,167 @@
+2.6
+- Added WordPress 6.1.1 compatibility
+- Added WooCommerce 7.1.0 compatibility
+- Updated BackpackTraveler Core to 1.6.2
+- Updated WPBakery Page Builder to 6.10.0
+- Updated Revolution Slider plugin to 6.6.7
+
+2.5
+- Added WordPress 6.0.1 compatibility
+- Added WooCommerce 6.7.0 compatibility
+- Updated WPBakery Page Builder to 6.9.0
+- Updated Revolution Slider plugin to 6.5.25
+- Updated BackpackTraveler Core to 1.6.1
+- Updated BackpackTraveler Instagram Feed plugin to 2.1.2
+- Updated BackpackTraveler Twitter Feed plugin to 1.2.2
+- Fixed fake ajax transition
+- Fixed 'Quantity' label visibility on single product pages
+- Fixed NaN value - WooCommerce quantity input fields
+- Improved social share
+- Removed "Menu Order" orderby option from shortcodes and widgets that display category lists
+
+2.4
+- Added WordPress 5.8.2 compatibility
+- Added WooCommerce 5.9.0 compatibility
+- Added PHP 8 compatibility
+- Updated WPBakery Page Builder to 6.7.0
+- Updated Revolution Slider plugin to 6.5.11
+- Updated BackpackTraveler Core to 1.6
+- Updcommonted BackpackTraveler Instagram Feed plugin to 2.1.1
+- Updated BackpackTraveler Twitter Feed plugin to 1.2.1
+- Updated BackpackTraveler Child theme to 1.0.1
+- Fixed potential security issue
+- Fixed cart widgets on WP 5.8
+- Fixed creation of the Custom Sidebars in new Widgets layout
+- Fixed 'Bulk Select' functionality with Menus
+- Improved backpacktraveler_mikado_get_attachment_id_from_url function
+- Removed old import tab
+- Removed Google Plus social share option
+- Theme options, CPT and shortcodes are now blocked if theme is not registered
+
+2.3.1
+- Minor changes
+
+2.3
+- Added compatibility with Qi Addons for Elementor plugin
+- Added WordPress 5.7.1 compatibility
+- Added WooCommerce 5.2.2 compatibility
+- Updated WPBakery Page Builder to 6.6.0
+- Updated Revolution Slider plugin to 6.4.8
+
+2.2.2
+- Fixed BackpackTraveler Instagram Feed plugin versioning
+- Fixed an issue with the Slider Revolution Preview feature
+
+2.2.1
+- Fixed Instagram Feed for business accounts
+- Updated BackpackTraveler Instagram Feed to 2.1
+- Updated Revolution Slider plugin to 6.2.23
+- Updated WPBakery Visual Composer plugin to 6.4.1
+
+2.2
+- Updated BackpackTraveler Instagram Feed to 2.0 version
+
+2.1
+- Added WordPress 5.5 compatibility
+- Updated BackpackTraveler Core plugin to 1.5.3
+- Updated Revolution Slider plugin to 6.2.22
+- Updated WPBakery Visual Composer plugin to 6.3.0
+
+2.0.2
+- Updated BackpackTraveler Core to 1.5.2
+- Updated WPBakery Page Builder to 6.2
+- Updated Revolution Slider to 6.2.12
+- Improved demo content import functionality
+- Improved WooCommerce quantity input field
+
+2.0.1
+- Updated BackpackTraveler Core to 1.5.1
+- Fixed js error when WooCommerce plugin is not installed
+- Fixed js error when Elementor plugin is not installed
+
+2.0
+- Added Elementor compatibility
+- Added Double Custom Link options for Image with text shortcode
+- Added WooCommerce 4.0 compatibility
+- Updated BackpackTraveler Core to 1.5
+- Updated Backpack Traveler Instagram Feed to 1.2
+- Updated Backpack Traveler Twitter Feed to 1.2
+- Updated Revolution Slider to 6.2.2
+- Fixed potential error when translating certain theme labels
+
+1.8.2
+- Removed excess options
+- Updated Backpack Traveler Instagram Feed to 1.1.2
+- Updated BackpackTraveler Core to 1.4.2
+
+1.8.1
+- Fixed script calling in import.php
+- Updated BackpackTraveler Core to 1.4.1
+
+1.8
+- Added WooCommerce 3.8.1 compatibility
+- Added BackpackTraveler Dashboard
+- Updated BackpackTraveler Core to 1.4
+- Updated Revolution Slider to 6.1.5
+- Improved Import
+- Improved Welcome Page
+- Changed BackpackTraveler Options Position
+
+1.7
+- Added WooCommerce 3.7.1 compatibility
+- Updated WPBakery Page Builder to 6.0.5
+- Updated Revolution Slider to 6.1.3
+- Updated Backpack Traveler Core plugin to 1.3.3
+- Updated Backpack Traveler Instagram Feed to 1.1.1
+- Updated Backpack Traveler Twitter Feed to 1.0.1
+- Fixed Product List - Simple shortcode
+- Fixed parallax background with zoom out effect
+- Fixed og description rendering for pages
+- Improved smooth page transitions effect
+- Improved cart page layout
+- Improved Custom Font widget
+- Removed unused file instagram-redirect.php from Backpack Traveler Instagram Feed plugin
+- Removed unused file twitter-redirect.php from Backpack Traveler Twitter Feed plugin
+
+
+1.6
+- Added WooCommerce 3.6.5 compatibility
+- Updated WPBakery Page Builder to 6.0.3
+- Updated Revolution Slider to 6.0.2
+- Updated BackpackTraveler Core to 1.3.2
+- Fixed Map With Destination category and tag option
+
+1.5
+- Updated BackpackTraveler Instagram Feed to 1.1
+- Fixed Horizontal Timeline drag on touch devices
+- Fixed Instagram Connection Error
+
+1.4.1
+- Added WooCommerce 3.6.1 compatibility
+- Improved theme files
+- Updated BackpackTraveler Core plugin to 1.3.1
+
+1.4
+- Added WooCommerce 3.5.5 compatibility
+- Improved framework files
+- Updated BackpackTraveler Core plugin to 1.3
+- Updated Revolution Slider to 5.4.8.3
+- Updated Visual Composer to 5.7
+- Updated pot file
+
+1.3
+- Added WordPress 5 compatibility
+- Updated WPBakery Page Builder to 5.6
+- Updated Revolution Slider to 5.4.8.2
+
+1.2
+- Added the possibility of not assigning destination to a single post
+- Updated BackpackTraveler Core plugin to 1.2
+- Fixed Destination Posts option dropdown not showing all pages
+- Fixed hardcoded image url in css causing SSL issue
+
+1.1
+- Updated BackpackTraveler Core plugin to 1.1
+- Fixed single posts display issue when uploading external posts
+- Fixed Horizontal Timeline shortcode to be able to show more than 20 items
+- Fixed issue when destination additional image is not being used/set
