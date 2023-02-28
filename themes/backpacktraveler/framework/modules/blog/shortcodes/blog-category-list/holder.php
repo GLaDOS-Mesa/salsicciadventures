@@ -1,5 +1,5 @@
 <div class="mkdf-blog-category-list-holder mkdf-grid-list <?php echo esc_attr( $holder_classes ); ?>">
-    <div class="mkdf-bcl-inner mkdf-outer-space clearfix">
+    <div class="mkdf-bcl-inner mkdf-outer-space <?php echo esc_attr( $inner_classes ); ?>">
             <?php
             if ( ! empty( $query_results ) ) {
                 foreach ($query_results as $query) {
