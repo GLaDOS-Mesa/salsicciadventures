@@ -102,7 +102,8 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
         $params['query_results']  = get_terms( $query_array );
 
 		$params['holder_classes'] = $this->getHolderClasses( $params, $args );
-		$params['inner_classes'] = $this->getInnerClasses( $params, $args );
+		$params['inner_classes'] = $this->getInnerClasses( $params );
+		$params['is_slider'] = $this->getIsSlider( $params );
 		
 		$params['image_size']     = $this->getImageSize( $params );
 		$params['title_tag']      = ! empty( $params['title_tag'] ) ? $params['title_tag'] : $args['title_tag'];
@@ -156,10 +157,15 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 		return implode( ' ', $classes );
 	}
 	
-	public function getInnerClasses( $params, $args ) {
+	public function getIsSlider( $params ) {
+		$isSlider = !empty( $params['number_of_columns']) && $params['number_of_columns'] === "all";
+		
+		return $isSlider;
+	}
+	public function getInnerClasses( $params ) {
 		$classes = array();
 		
-		$classes[] = ! empty( $params['number_of_columns'] && $params['number_of_columns'] === "all")
+		$classes[] = $this->getIsSlider($params)
 			? 'custom-slider-inner'
 			: "clearfix";
 		
