@@ -15,11 +15,11 @@ Template: backpacktraveler
     grid-auto-columns: minmax(190px,1fr);
     overflow-x: auto;
 }
-.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns.mkdf-normal-space {
+.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns {
     position: relative;
 }
-.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns.mkdf-normal-space .arrow.arrow--left,
-.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns.mkdf-normal-space .arrow.arrow--right {
+.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns .arrow.arrow--left,
+.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns .arrow.arrow--right {
     font-size: 2rem;
     font-weight: bold;
     position: absolute;
@@ -27,20 +27,36 @@ Template: backpacktraveler
     top: 0;
     bottom: 0;
     z-index: 2;
+    background: none;
+    border: 0;
+    cursor: pointer;
 }
-.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns.mkdf-normal-space .arrow.arrow--left {
+.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns .arrow.arrow--left {
     left: -25px;
 }
-.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns.mkdf-normal-space .arrow.arrow--right {
+.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns .arrow.arrow--right {
     right: -25px;
 }
-.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns.mkdf-normal-space .custom-slider-wrapper {
-    margin: 0 15px;
+.mkdf-blog-category-list-holder.mkdf-grid-list.mkdf-all-columns .custom-slider-wrapper {
+    margin: 0 30px;
     overflow: hidden;
 }
 .mkdf-grid-list.mkdf-all-columns .custom-slider-inner::-webkit-scrollbar {
     display: none;
 }
-.mkdf-grid-list.mkdf-all-columns .custom-slider-inner .mkdf-item-space {
-
+.mkdf-blog-category-list-holder .custom-slider-inner article .mkdf-bcl-item-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.mkdf-blog-category-list-holder .custom-slider-inner article .mkdf-bcli-text-holder {
+    height: 100%;
+}
+.mkdf-blog-category-list-holder .custom-slider-inner article .mkdf-bcli-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.mkdf-blog-category-list-holder .custom-slider-inner article .mkdf-bcli-count {
+    margin-top:  auto;
 }

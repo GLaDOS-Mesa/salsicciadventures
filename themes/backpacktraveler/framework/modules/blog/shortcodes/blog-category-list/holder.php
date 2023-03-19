@@ -1,6 +1,6 @@
 <div class="mkdf-blog-category-list-holder mkdf-grid-list <?php echo esc_attr( $holder_classes ); ?>">
     <?php if ( $is_slider ) { ?>
-        <div class="arrow arrow--left"> < </div>
+        <button class="arrow arrow--left" onClick="clickArrow('left')"> < </button>
         <div class="custom-slider-wrapper">
     <?php } ?>
             <div class="mkdf-bcl-inner mkdf-outer-space <?php echo esc_attr( $inner_classes ); ?>">
@@ -34,6 +34,6 @@
             </div>
     <?php if ( $is_slider ) { ?>
         </div>
-        <div class="arrow arrow--right"> > </div>
+        <button class="arrow arrow--right" onClick="clickArrow('right')"> > </button>
     <?php } ?>
 </div>
