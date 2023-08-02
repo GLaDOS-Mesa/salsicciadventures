@@ -13,12 +13,12 @@ if (! function_exists( 'backpacktraveler_mikado_child_theme_enqueue_scripts' ) )
 		wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js', '', true );
 	}
 
-	add_action('wp_enqueue_scripts', 'backpacktraveler_mikado_child_theme_enqueue_scripts');
+	add_action('wp_enqueue_scripts', 'backpacktraveler_mikado_child_theme_enqueue_scripts', 99999);
 }
 
 // Activate WordPress Maintenance Mode
 function wp_maintenance_mode() {
-    if (!current_user_can('edit_themes') || !is_user_logged_in()) {
+    if (!is_user_logged_in()) {
         wp_die('
         <p style="text-align:center">Under construction</p>
         ', "SalsicciAdventures", array("response" => 503));
