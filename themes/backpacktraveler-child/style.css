@@ -78,3 +78,8 @@ Template: backpacktraveler
 .custom-slider-inner article .mkdf-bcli-count {
     margin-top:  auto;
 }
+
+.vc_row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
