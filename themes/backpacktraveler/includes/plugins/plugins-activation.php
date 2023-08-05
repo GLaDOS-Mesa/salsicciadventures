@@ -26,7 +26,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'Revolution Slider', 'backpacktraveler' ),
 				'slug'               => 'revslider',
 				'source'             => get_template_directory() . '/includes/plugins/revslider.zip',
-				'version'            => '6.6.7',
+				'version'            => '6.6.11',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false
@@ -35,7 +35,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'BackpackTraveler Core', 'backpacktraveler' ),
 				'slug'               => 'backpacktraveler-core',
 				'source'             => get_template_directory() . '/includes/plugins/backpacktraveler-core.zip',
-				'version'            => '1.6.1',
+				'version'            => '1.7',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false
@@ -44,7 +44,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'BackpackTraveler Instagram Feed', 'backpacktraveler' ),
 				'slug'               => 'backpacktraveler-instagram-feed',
 				'source'             => get_template_directory() . '/includes/plugins/backpacktraveler-instagram-feed.zip',
-				'version'            => '2.1.2',
+				'version'            => '2.1.3',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false
@@ -53,13 +53,13 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'BackpackTraveler Twitter Feed', 'backpacktraveler' ),
 				'slug'               => 'backpacktraveler-twitter-feed',
 				'source'             => get_template_directory() . '/includes/plugins/backpacktraveler-twitter-feed.zip',
-				'version'            => '1.2.2',
+				'version'            => '1.2.3',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false
 			),
 			array(
-				'name'     => esc_html__( 'Qi Addons for Elementor', 'zermatt' ),
+				'name'     => esc_html__( 'Qi Addons for Elementor', 'backpacktraveler' ),
 				'slug'     => 'qi-addons-for-elementor',
 				'required'           => true,
 				'force_activation'   => false,

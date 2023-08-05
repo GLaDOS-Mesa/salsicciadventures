@@ -540,4 +540,4 @@ class BackpackTravelerMikadoElementorBlogList extends \Elementor\Widget_Base {
     }
 }
 
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new BackpackTravelerMikadoElementorBlogList() );
+backpacktraveler_mikado_register_new_elementor_widget( new BackpackTravelerMikadoElementorBlogList() );

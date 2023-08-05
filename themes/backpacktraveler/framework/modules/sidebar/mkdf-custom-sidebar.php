@@ -26,6 +26,14 @@ if ( ! class_exists( 'BackpackTravelerMikadoClassSidebar' ) ) {
 			
 			wp_enqueue_script( 'backpacktraveler-mikado-admin-sidebar-script', MIKADO_ROOT . '/framework/admin/assets/js/mkdf-ui/mkdf-sidebar.js' );
 			wp_enqueue_style( 'backpacktraveler-mikado-admin-sidebar', MIKADO_ROOT . '/framework/admin/assets/css/mkdf-sidebar.css' );
+
+			wp_localize_script(
+				'backpacktraveler-mikado-admin-sidebar-script',
+				'mkdf',
+				array(
+					'customSidebars' => get_option( $this->stored ),
+				)
+			);
 		}
 		
 		//widget form template

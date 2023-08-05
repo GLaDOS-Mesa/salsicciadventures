@@ -100,10 +100,10 @@ class BackpackTravelerMikadoClass_Walker_Nav_Menu_Edit_Custom extends Walker_Nav
 		<li id="menu-item-<?php echo esc_attr($item_id); ?>" class="<?php echo implode(' ', $classes ); ?>">
 			<div class="menu-item-bar">
 				<div class="menu-item-handle">
-					<label class="item-title" for="menu-item-checkbox-<?php echo $item_id; ?>">
-						<input id="menu-item-checkbox-<?php echo $item_id; ?>" type="checkbox" class="menu-item-checkbox" data-menu-item-id="<?php echo $item_id; ?>" disabled="disabled" />
+					<label class="item-title" for="menu-item-checkbox-<?php echo esc_attr($item_id); ?>">
+						<input id="menu-item-checkbox-<?php echo esc_attr($item_id); ?>" type="checkbox" class="menu-item-checkbox" data-menu-item-id="<?php echo esc_attr( $item_id ); ?>" disabled="disabled" />
 						<span class="menu-item-title"><?php echo esc_html( $title ); ?></span>
-						<span class="is-submenu" <?php echo $submenu_text; ?>><?php _e( 'sub item' ); ?></span>
+						<span class="is-submenu" <?php echo esc_html( $submenu_text ); ?>><?php _e( 'sub item', 'backpacktraveler' ); ?></span>
 					</label>
 					<span class="item-controls">
 						<span class="item-type"><?php echo esc_html( $item->type_label ); ?></span>

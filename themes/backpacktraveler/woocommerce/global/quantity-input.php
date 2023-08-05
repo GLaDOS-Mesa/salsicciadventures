@@ -12,41 +12,63 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 4.0.0
+ * @version 7.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! isset ( $input_id ) ) {
-	$input_id = uniqid( 'quantity_' );
-}
+/* translators: %s: Quantity. */
+$label = esc_html__( 'Quantity', 'backpacktraveler' );
 
 if ( $max_value && $min_value === $max_value ) {
+	$is_readonly = true;
+	$input_value = $min_value;
 	?>
 	<div class="mkdf-quantity-buttons quantity hidden">
 		<input type="hidden" id="<?php echo esc_attr( $input_id ); ?>" class="qty" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $min_value ); ?>" />
 	</div>
 	<?php
 } else {
-	/* translators: %s: Quantity. */
-	$label = esc_html__( 'Quantity', 'backpacktraveler' );
-	?>
-	<div class="mkdf-quantity-buttons quantity">
-		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
-		<span class="mkdf-quantity-minus icon_minus-06"></span>
-		<input  type="text"
-		        id="<?php echo esc_attr( $input_id ); ?>"
-		        class="mkdf-quantity-input <?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
-		        data-step="<?php echo esc_attr( $step ); ?>"
-		        data-min="<?php echo esc_attr( $min_value ); ?>"
-		        data-max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
-		        name="<?php echo esc_attr( $input_name ); ?>"
-		        value="<?php echo esc_attr( $input_value ); ?>"
-		        title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'backpacktraveler' ); ?>"
-		        size="4"
-                placeholder="<?php echo esc_attr( $placeholder ); ?>"
-		        inputmode="<?php echo esc_attr( $inputmode ); ?>" />
-		<span class="mkdf-quantity-plus icon_plus"></span>
-	</div>
-	<?php
+	$is_readonly = false;
 }
+?>
+<div class="mkdf-quantity-buttons quantity">
+	<?php
+	/**
+	 * Hook to output something before the quantity input field.
+	 *
+	 * @since 7.2.0
+	 */
+	do_action( 'woocommerce_before_quantity_input_field' );
+	?>
+	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
+	<span class="mkdf-quantity-minus icon_minus-06"></span>
+	<input
+		type="text"
+		<?php wp_readonly( $is_readonly ); ?>
+        id="<?php echo esc_attr( $input_id ); ?>"
+        class="mkdf-quantity-input <?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
+		name="<?php echo esc_attr( $input_name ); ?>"
+		value="<?php echo esc_attr( $input_value ); ?>"
+        title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'backpacktraveler' ); ?>"
+        size="4"
+		data-min="<?php echo esc_attr( $min_value ); ?>"
+		data-max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
+		<?php if ( ! $is_readonly ): ?>
+			data-step="<?php echo esc_attr( $step ); ?>"
+			placeholder="<?php echo esc_attr( $placeholder ); ?>"
+			inputmode="<?php echo esc_attr( $inputmode ); ?>"
+			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
+		<?php endif; ?>
+	/>
+	<span class="mkdf-quantity-plus icon_plus"></span>
+	<?php
+	/**
+	 * Hook to output something after quantity input field
+	 *
+	 * @since 3.6.0
+	 */
+	do_action( 'woocommerce_after_quantity_input_field' );
+	?>
+</div>
+<?php

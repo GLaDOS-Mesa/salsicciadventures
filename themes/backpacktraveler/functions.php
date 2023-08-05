@@ -65,93 +65,97 @@ if ( ! function_exists( 'backpacktraveler_mikado_google_fonts_styles' ) ) {
 	 * Function that includes google fonts defined anywhere in the theme
 	 */
 	function backpacktraveler_mikado_google_fonts_styles() {
-		$font_simple_field_array = backpacktraveler_mikado_options()->getOptionsByType( 'fontsimple' );
-		if ( ! ( is_array( $font_simple_field_array ) && count( $font_simple_field_array ) > 0 ) ) {
-			$font_simple_field_array = array();
-		}
-		
-		$font_field_array = backpacktraveler_mikado_options()->getOptionsByType( 'font' );
-		if ( ! ( is_array( $font_field_array ) && count( $font_field_array ) > 0 ) ) {
-			$font_field_array = array();
-		}
-		
-		$available_font_options = array_merge( $font_simple_field_array, $font_field_array );
-		
-		$google_font_weight_array = backpacktraveler_mikado_options()->getOptionValue( 'google_font_weight' );
-		if ( ! empty( $google_font_weight_array ) && is_array( $google_font_weight_array ) ) {
-			$google_font_weight_array = array_slice( backpacktraveler_mikado_options()->getOptionValue( 'google_font_weight' ), 1 );
-		}
-		
-		$font_weight_str = '300,300i,400,400i,500,500i,kdf-post-info-category700';
-		if ( ! empty( $google_font_weight_array ) && $google_font_weight_array !== '' && is_array( $google_font_weight_array ) ) {
-			$font_weight_str = implode( ',', $google_font_weight_array );
-		}
-		
-		$google_font_subset_array = backpacktraveler_mikado_options()->getOptionValue( 'google_font_subset' );
-		if ( ! empty( $google_font_subset_array ) && is_array( $google_font_subset_array ) ) {
-			$google_font_subset_array = array_slice( backpacktraveler_mikado_options()->getOptionValue( 'google_font_subset' ), 1 );
-		}
-		
-		$font_subset_str = 'latin-ext';
-		if ( ! empty( $google_font_subset_array ) && $google_font_subset_array !== '' && is_array( $google_font_subset_array ) ) {
-			$font_subset_str = implode( ',', $google_font_subset_array );
-		}
-		
-		//default fonts
-		$default_font_family = array(
-			'Montserrat',
-			'Lora',
-			'EpicRide'
-		);
-		
-		$modified_default_font_family = array();
-		foreach ( $default_font_family as $default_font ) {
-			$modified_default_font_family[] = $default_font . ':' . str_replace( ' ', '', $font_weight_str );
-		}
-		
-		$default_font_string = implode( '|', $modified_default_font_family );
-		
-		//define available font options array
-		$fonts_array = array();
-		foreach ( $available_font_options as $font_option ) {
-			//is font set and not set to default and not empty?
-			$font_option_value = backpacktraveler_mikado_options()->getOptionValue( $font_option );
-			
-			if ( backpacktraveler_mikado_is_font_option_valid( $font_option_value ) && ! backpacktraveler_mikado_is_native_font( $font_option_value ) ) {
-				$font_option_string = $font_option_value . ':' . $font_weight_str;
-				
-				if ( ! in_array( str_replace( '+', ' ', $font_option_value ), $default_font_family ) && ! in_array( $font_option_string, $fonts_array ) ) {
-					$fonts_array[] = $font_option_string;
+		$is_enabled = boolval( apply_filters( 'backpacktraveler_mikado_filter_enable_google_fonts', true ) );
+
+		if ( $is_enabled ) {
+			$font_simple_field_array = backpacktraveler_mikado_options()->getOptionsByType( 'fontsimple' );
+			if ( ! ( is_array( $font_simple_field_array ) && count( $font_simple_field_array ) > 0 ) ) {
+				$font_simple_field_array = array();
+			}
+
+			$font_field_array = backpacktraveler_mikado_options()->getOptionsByType( 'font' );
+			if ( ! ( is_array( $font_field_array ) && count( $font_field_array ) > 0 ) ) {
+				$font_field_array = array();
+			}
+
+			$available_font_options = array_merge( $font_simple_field_array, $font_field_array );
+
+			$google_font_weight_array = backpacktraveler_mikado_options()->getOptionValue( 'google_font_weight' );
+			if ( ! empty( $google_font_weight_array ) && is_array( $google_font_weight_array ) ) {
+				$google_font_weight_array = array_slice( backpacktraveler_mikado_options()->getOptionValue( 'google_font_weight' ), 1 );
+			}
+
+			$font_weight_str = '300,300i,400,400i,500,500i,kdf-post-info-category700';
+			if ( ! empty( $google_font_weight_array ) && $google_font_weight_array !== '' && is_array( $google_font_weight_array ) ) {
+				$font_weight_str = implode( ',', $google_font_weight_array );
+			}
+
+			$google_font_subset_array = backpacktraveler_mikado_options()->getOptionValue( 'google_font_subset' );
+			if ( ! empty( $google_font_subset_array ) && is_array( $google_font_subset_array ) ) {
+				$google_font_subset_array = array_slice( backpacktraveler_mikado_options()->getOptionValue( 'google_font_subset' ), 1 );
+			}
+
+			$font_subset_str = 'latin-ext';
+			if ( ! empty( $google_font_subset_array ) && $google_font_subset_array !== '' && is_array( $google_font_subset_array ) ) {
+				$font_subset_str = implode( ',', $google_font_subset_array );
+			}
+
+			//default fonts
+			$default_font_family = array(
+				'Montserrat',
+				'Lora',
+				'EpicRide'
+			);
+
+			$modified_default_font_family = array();
+			foreach ( $default_font_family as $default_font ) {
+				$modified_default_font_family[] = $default_font . ':' . str_replace( ' ', '', $font_weight_str );
+			}
+
+			$default_font_string = implode( '|', $modified_default_font_family );
+
+			//define available font options array
+			$fonts_array = array();
+			foreach ( $available_font_options as $font_option ) {
+				//is font set and not set to default and not empty?
+				$font_option_value = backpacktraveler_mikado_options()->getOptionValue( $font_option );
+
+				if ( backpacktraveler_mikado_is_font_option_valid( $font_option_value ) && ! backpacktraveler_mikado_is_native_font( $font_option_value ) ) {
+					$font_option_string = $font_option_value . ':' . $font_weight_str;
+
+					if ( ! in_array( str_replace( '+', ' ', $font_option_value ), $default_font_family ) && ! in_array( $font_option_string, $fonts_array ) ) {
+						$fonts_array[] = $font_option_string;
+					}
 				}
 			}
-		}
-		
-		$fonts_array         = array_diff( $fonts_array, array( '-1:' . $font_weight_str ) );
-		$google_fonts_string = implode( '|', $fonts_array );
-		
-		$protocol = is_ssl() ? 'https:' : 'http:';
-		
-		//is google font option checked anywhere in theme?
-		if ( count( $fonts_array ) > 0 ) {
-			
-			//include all checked fonts
-			$fonts_full_list      = $default_font_string . '|' . str_replace( '+', ' ', $google_fonts_string );
-			$fonts_full_list_args = array(
-				'family' => urlencode( $fonts_full_list ),
-				'subset' => urlencode( $font_subset_str ),
-			);
-			
-			$backpacktraveler_mikado_global_fonts = add_query_arg( $fonts_full_list_args, $protocol . '//fonts.googleapis.com/css' );
-			wp_enqueue_style( 'backpacktraveler-mikado-google-fonts', esc_url_raw( $backpacktraveler_mikado_global_fonts ), array(), '1.0.0' );
-			
-		} else {
-			//include default google font that theme is using
-			$default_fonts_args          = array(
-				'family' => urlencode( $default_font_string ),
-				'subset' => urlencode( $font_subset_str ),
-			);
-			$backpacktraveler_mikado_global_fonts = add_query_arg( $default_fonts_args, $protocol . '//fonts.googleapis.com/css' );
-			wp_enqueue_style( 'backpacktraveler-mikado-google-fonts', esc_url_raw( $backpacktraveler_mikado_global_fonts ), array(), '1.0.0' );
+
+			$fonts_array         = array_diff( $fonts_array, array( '-1:' . $font_weight_str ) );
+			$google_fonts_string = implode( '|', $fonts_array );
+
+			$protocol = is_ssl() ? 'https:' : 'http:';
+
+			//is google font option checked anywhere in theme?
+			if ( is_array( $fonts_array ) && count( $fonts_array ) > 0 ) {
+
+				//include all checked fonts
+				$fonts_full_list      = $default_font_string . '|' . str_replace( '+', ' ', $google_fonts_string );
+				$fonts_full_list_args = array(
+					'family' => urlencode( $fonts_full_list ),
+					'subset' => urlencode( $font_subset_str ),
+				);
+
+				$backpacktraveler_mikado_global_fonts = add_query_arg( $fonts_full_list_args, $protocol . '//fonts.googleapis.com/css' );
+				wp_enqueue_style( 'backpacktraveler-mikado-google-fonts', esc_url_raw( $backpacktraveler_mikado_global_fonts ), array(), '1.0.0' );
+
+			} else {
+				//include default google font that theme is using
+				$default_fonts_args                   = array(
+					'family' => urlencode( $default_font_string ),
+					'subset' => urlencode( $font_subset_str ),
+				);
+				$backpacktraveler_mikado_global_fonts = add_query_arg( $default_fonts_args, $protocol . '//fonts.googleapis.com/css' );
+				wp_enqueue_style( 'backpacktraveler-mikado-google-fonts', esc_url_raw( $backpacktraveler_mikado_global_fonts ), array(), '1.0.0' );
+			}
 		}
 	}
 	
@@ -214,10 +218,12 @@ if ( ! function_exists( 'backpacktraveler_mikado_scripts' ) ) {
 		}
 
 		if ( ! empty( $google_maps_api_key ) ) {
-			wp_enqueue_script( 'backpacktraveler-mikado-google-map-api', '//maps.googleapis.com/maps/api/js?key=' . esc_attr( $google_maps_api_key ) . $google_maps_extensions, array(), false, true );
+			wp_enqueue_script( 'backpacktraveler-mikado-google-map-api', '//maps.googleapis.com/maps/api/js?key=' . esc_attr( $google_maps_api_key ) . "&callback=qodefEmptyCallback" . $google_maps_extensions, array(), false, true );
             if ( ! empty( $google_maps_extensions_array ) && is_array( $google_maps_extensions_array ) ) {
                 wp_enqueue_script('geocomplete', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery.geocomplete.min.js', array('jquery', 'backpacktraveler-mikado-google-map-api'), false, true);
             }
+
+			wp_add_inline_script('backpacktraveler-mikado-google-map-api', 'window.qodefEmptyCallback = function () {};','before');
 		}
 
 		wp_enqueue_script( 'backpacktraveler-mikado-modules', MIKADO_ASSETS_ROOT . '/js/modules.min.js', array( 'jquery' ), false, true );

@@ -2,6 +2,200 @@
    Search styles - begin
    ========================================================================== */
 /* ==========================================================================
+# Block widget search style - start
+========================================================================== */
+.widget_block.widget_search .mkdf-search-form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner {
+  position: relative;
+  width: 100%;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: text;
+  outline: 0;
+  padding: 9px 12px 10px;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  background-color: transparent;
+  border-color: #edeff2;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::-webkit-input-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::-moz-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field:-ms-input-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::-ms-input-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+  padding: 9px 12px 10px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 2em !important;
+  letter-spacing: .2em !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--has-icon {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 100% !important;
+  padding: 9px 0 10px !important;
+  border: 0 !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
+  font-size: 18px;
+  line-height: 26px;
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-outside {
+  margin-left: 0 !important;
+  border: 1px solid #000 !important;
+  background-color: #000 !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-inside {
+  background-color: transparent !important;
+  border: none !important;
+  height: 100% !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-label {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field {
+  border-color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::-moz-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-button {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-button.mkdf--button-outside {
+  border-color: #2a2a2a;
+  background-color: #2a2a2a;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-label {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field {
+  border-color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::-webkit-input-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::-moz-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field:-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-button {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+# Block widget search style - end
+========================================================================== */
+/* ==========================================================================
 # Search opener - begin
 ========================================================================== */
 .mkdf-search-opener {
@@ -626,5 +820,3 @@
 /* ==========================================================================
    Search styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=search-map.css.map */

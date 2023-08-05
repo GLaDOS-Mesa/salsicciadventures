@@ -25,12 +25,6 @@ if ( ! class_exists( 'BackpackTravelerMikadoWelcomePage' ) ) {
 		}
 
 		/**
-		 * cloning disabled
-		 */
-		private function __clone() {
-		}
-
-		/**
 		 * constructor
 		 */
 		private function __construct() {

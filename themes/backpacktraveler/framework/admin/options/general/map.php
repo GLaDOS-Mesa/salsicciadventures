@@ -23,6 +23,28 @@ if ( ! function_exists( 'backpacktraveler_mikado_general_options_map' ) ) {
 				'title' => esc_html__( 'Appearance', 'backpacktraveler' )
 			)
 		);
+
+		backpacktraveler_mikado_add_admin_field(
+			array(
+				'name'          => 'enable_google_fonts',
+				'type'          => 'yesno',
+				'default_value' => 'yes',
+				'label'         => esc_html__( 'Enable Google Fonts', 'backpacktraveler' ),
+				'parent'        => $panel_design_style
+			)
+		);
+
+		$google_fonts_container = backpacktraveler_mikado_add_admin_container(
+			array(
+				'parent'          => $panel_design_style,
+				'name'            => 'google_fonts_container',
+				'dependency' => array(
+					'hide' => array(
+						'enable_google_fonts'  => 'no'
+					)
+				)
+			)
+		);
 		
 		backpacktraveler_mikado_add_admin_field(
 			array(
@@ -31,7 +53,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_general_options_map' ) ) {
 				'default_value' => '-1',
 				'label'         => esc_html__( 'Google Font Family', 'backpacktraveler' ),
 				'description'   => esc_html__( 'Choose a default Google font for your site', 'backpacktraveler' ),
-				'parent'        => $panel_design_style
+				'parent'        => $google_fonts_container
 			)
 		);
 		
@@ -41,13 +63,13 @@ if ( ! function_exists( 'backpacktraveler_mikado_general_options_map' ) ) {
 				'type'          => 'yesno',
 				'default_value' => 'no',
 				'label'         => esc_html__( 'Additional Google Fonts', 'backpacktraveler' ),
-				'parent'        => $panel_design_style
+				'parent'        => $google_fonts_container
 			)
 		);
 		
 		$additional_google_fonts_container = backpacktraveler_mikado_add_admin_container(
 			array(
-				'parent'          => $panel_design_style,
+				'parent'          => $google_fonts_container,
 				'name'            => 'additional_google_fonts_container',
 				'dependency' => array(
 					'show' => array(
@@ -119,7 +141,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_general_options_map' ) ) {
 				'default_value' => '',
 				'label'         => esc_html__( 'Google Fonts Style & Weight', 'backpacktraveler' ),
 				'description'   => esc_html__( 'Choose a default Google font weights for your site. Impact on page load time', 'backpacktraveler' ),
-				'parent'        => $panel_design_style,
+				'parent'        => $google_fonts_container,
 				'options'       => array(
 					'100'  => esc_html__( '100 Thin', 'backpacktraveler' ),
 					'100i' => esc_html__( '100 Thin Italic', 'backpacktraveler' ),
@@ -150,7 +172,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_general_options_map' ) ) {
 				'default_value' => '',
 				'label'         => esc_html__( 'Google Fonts Subset', 'backpacktraveler' ),
 				'description'   => esc_html__( 'Choose a default Google font subsets for your site', 'backpacktraveler' ),
-				'parent'        => $panel_design_style,
+				'parent'        => $google_fonts_container,
 				'options'       => array(
 					'latin'        => esc_html__( 'Latin', 'backpacktraveler' ),
 					'latin-ext'    => esc_html__( 'Latin Extended', 'backpacktraveler' ),

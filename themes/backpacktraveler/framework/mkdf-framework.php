@@ -34,10 +34,12 @@ if ( ! function_exists( 'backpacktraveler_mikado_admin_scripts_init' ) ) {
 				$google_maps_extensions .= implode( ',', $google_maps_extensions_array );
 			}
 			if ( ! empty( $google_maps_api_key ) ) {
-                wp_enqueue_script( 'backpacktraveler-mikado-admin-maps', '//maps.googleapis.com/maps/api/js?key=' . esc_attr( $google_maps_api_key ) . $google_maps_extensions, array(), false, true );
+                wp_enqueue_script( 'backpacktraveler-mikado-admin-maps', '//maps.googleapis.com/maps/api/js?key=' . esc_attr( $google_maps_api_key ) . "&callback=qodefEmptyCallback" . $google_maps_extensions, array(), false, true );
                 if ( ! empty( $google_maps_extensions_array ) && is_array( $google_maps_extensions_array ) ) {
                     wp_enqueue_script('geocomplete', get_template_directory_uri() . '/framework/admin/assets/js/jquery.geocomplete.min.js', array('jquery', 'mkdf-admin-maps'), false, true);
                 }
+
+				wp_add_inline_script('backpacktraveler-mikado-google-map-api', 'window.qodefEmptyCallback = function () {};','before');
 			}
 		}
 

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 #respond textarea,
 .mkdf-style-form textarea,
 #respond input[type='text'],
@@ -7639,6 +7641,162 @@ footer div[id*="monster"] .mkdf-widget-title {
   left: 28px;
 }
 
+/* ==========================================================================
+   Price Filter block widget start styles
+   ========================================================================== */
+
+.widget.widget_block .wc-blocks-filter-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.widget.widget_block .wc-blocks-filter-wrapper > h3 {
+  display: inline-block;
+  width: auto;
+  margin: 0 0 3px;
+  background-color: #fff;
+  padding: 0 12px;
+  z-index: 90;
+  position: relative;
+  font-size: 10px;
+  line-height: 1.8em;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-align: center;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.widget.widget_block .wc-blocks-filter-wrapper::before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #f2f2f2;
+  top: 15px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.widget.widget_block .wc-block-components-price-slider {
+  margin: 0;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-input-wrapper {
+  margin: 15px 0 7px;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-input-progress {
+  height: 3px;
+  --track-background: linear-gradient(90deg,transparent var(--low),#2a2a2a 0,#2a2a2a var(--high),transparent 0) no-repeat 0 100%/100% 100%;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-input::-webkit-slider-thumb {
+  border-radius: 0;
+  height: 10px;
+  margin: 0;
+  outline: none;
+  position: relative;
+  top: -2.5px;
+  width: 10px;
+  border: none;
+  background-color: #2a2a2a;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-input::-moz-range-thumb {
+  border-radius: 0;
+  height: 10px;
+  margin: 0;
+  outline: none;
+  position: relative;
+  top: -2.5px;
+  width: 10px;
+  border: none;
+  background-color: #2a2a2a;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-input::-ms-thumb {
+  border-radius: 0;
+  height: 10px;
+  margin: 0;
+  outline: none;
+  position: relative;
+  top: -2.5px;
+  width: 10px;
+  border: none;
+  background-color: #2a2a2a;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__controls {
+  margin: 0;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-filter-reset-button:hover {
+  text-decoration: none !important;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  float: left;
+  font-size: 12px;
+  font-family: Montserrat,sans-serif;
+  line-height: 38px;
+  letter-spacing: 1px;
+  color: #959595;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-text .wc-block-formatted-money-amount {
+  font-size: inherit;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-text .wc-block-formatted-money-amount:first-child:after {
+  content: '—';
+  margin: 0 5px;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-text button {
+  margin-top: 1px;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-text ~ .wc-block-components-price-slider__actions {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  float: right;
+}
+
+.widget.widget_block .wc-block-components-price-slider .wc-block-components-price-slider__range-text ~ .wc-block-components-price-slider__actions .wc-block-components-filter-submit-button {
+  float: right;
+  padding: 0;
+  background-color: transparent !important;
+  border: none;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: .33em;
+  line-height: 2.7em;
+}
+
+.widget.widget_block .wc-block-components-price-slider button {
+  float: right;
+  height: 38px;
+  line-height: 41px;
+  padding: 0 28px;
+  border-radius: 0 !important;
+}
+
+.widget.widget_block .wc-block-components-price-slider button.wc-block-components-filter-reset-button {
+  padding: 0 12px;
+}
+
+/* ==========================================================================
+   Price Filter block widget end styles
+   ========================================================================== */
+
 .mkdf-side-menu {
   /* ==========================================================================
    Default WordPress widgets styles - begin
@@ -13706,8 +13864,6 @@ aside.mkdf-sidebar .widget_icl_lang_sel_widget .wpml-ls-legacy-dropdown-click,
 /* ==========================================================================
    WPML style start
    ========================================================================== */
-
-/*# sourceMappingURL=../css/modules.css.map */
 /* ==========================================================================
    Blog styles - begin
    ========================================================================== */
@@ -16679,8 +16835,6 @@ aside.mkdf-sidebar .widget_icl_lang_sel_widget .wpml-ls-legacy-dropdown-click,
 /* ==========================================================================
    Blog styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=blog-map.css.map */
 /* ==========================================================================
    Content Bottom styles - begin
    ========================================================================== */
@@ -16710,8 +16864,6 @@ aside.mkdf-sidebar .widget_icl_lang_sel_widget .wpml-ls-legacy-dropdown-click,
 /* ==========================================================================
    Content Bottom styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=content-bottom-map.css.map */
 /* ==========================================================================
    Footer styles - begin
    ========================================================================== */
@@ -16811,8 +16963,6 @@ aside.mkdf-sidebar .widget_icl_lang_sel_widget .wpml-ls-legacy-dropdown-click,
 /* ==========================================================================
    Footer styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=footer-map.css.map */
 /* ==========================================================================
    Header styles - begin
    ========================================================================== */
@@ -20038,11 +20188,205 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Header styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=header-map.css.map */
 /* ==========================================================================
    Search styles - begin
    ========================================================================== */
+
+/* ==========================================================================
+# Block widget search style - start
+========================================================================== */
+
+.widget_block.widget_search .mkdf-search-form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner {
+  position: relative;
+  width: 100%;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: text;
+  outline: 0;
+  padding: 9px 12px 10px;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  background-color: transparent;
+  border-color: #edeff2;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::-webkit-input-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::-moz-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field:-ms-input-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::-ms-input-placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner .mkdf-search-form-field::placeholder {
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+  padding: 9px 12px 10px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 2em !important;
+  letter-spacing: .2em !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--has-icon {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 100% !important;
+  padding: 9px 0 10px !important;
+  border: 0 !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
+  font-size: 18px;
+  line-height: 26px;
+  color: #2a2a2a;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-outside {
+  margin-left: 0 !important;
+  border: 1px solid #000 !important;
+  background-color: #000 !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-inside {
+  background-color: transparent !important;
+  border: none !important;
+  height: 100% !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-label {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field {
+  border-color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::-moz-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-field::placeholder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-button {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
+  color: #fff !important;
+}
+
+.mkdf-light-header .widget_block.widget_search .mkdf-search-form-button.mkdf--button-outside {
+  border-color: #2a2a2a;
+  background-color: #2a2a2a;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-label {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field {
+  border-color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::-webkit-input-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::-moz-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field:-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::-ms-input-placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-field::placeholder {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-button {
+  color: #000000 !important;
+}
+
+.mkdf-dark-header .widget_block.widget_search .mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+# Block widget search style - end
+========================================================================== */
 
 /* ==========================================================================
 # Search opener - begin
@@ -20684,8 +21028,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Search styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=search-map.css.map */
 /* ==========================================================================
    Side area styles - begin
    ========================================================================== */
@@ -21034,8 +21376,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Side area styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=sidearea-map.css.map */
 /* ==========================================================================
    Title styles - begin
    ========================================================================== */
@@ -21259,8 +21599,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Title styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=title-map.css.map */
 /* ==========================================================================
    Author Info widget style - begin
    ========================================================================== */
@@ -21309,8 +21647,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Author Info widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=author-info-widget-map.css.map */
 /* ==========================================================================
    Custom Font widget style - begin
    ========================================================================== */
@@ -21322,8 +21658,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Custom Font widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=custom-font-widget-map.css.map */
 /* ==========================================================================
    Icon widget style - begin
    ========================================================================== */
@@ -21394,8 +21728,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Icon widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=icon-widget-map.css.map */
 /* ==========================================================================
    Image Gallery widget style - begin
    ========================================================================== */
@@ -21415,8 +21747,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Image Gallery widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=image-gallery-widget-map.css.map */
 /* ==========================================================================
    Search Post Type widget style - begin
    ========================================================================== */
@@ -21484,8 +21814,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Search Post Type widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=search-post-type-widget-map.css.map */
 /* ==========================================================================
    Separator widget style - begin
    ========================================================================== */
@@ -21497,8 +21825,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Separator widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=separator-widget-map.css.map */
 /* ==========================================================================
    Social Icon widget style - begin
    ========================================================================== */
@@ -21539,8 +21865,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Social Icon widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=social-icon-widget-map.css.map */
 /* ==========================================================================
    Social Icons Group widget style - begin
    ========================================================================== */
@@ -21610,8 +21934,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Social Icons Group widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=social-icons-group-widget-map.css.map */
 /* ==========================================================================
    Sticky Sidebar widget start styles
    ========================================================================== */
@@ -21629,8 +21951,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Sticky Sidebar widget end styles
    ========================================================================== */
-
-/*# sourceMappingURL=sticky-sidebar-widget-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -23831,8 +24151,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Testimonials shortcode style - end
    ========================================================================== */
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-core/assets/css/custom-post-types-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -23840,8 +24158,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 /* ==========================================================================
    Custom Post Types styles
    ========================================================================== */
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-core/assets/css/modules-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -29301,8 +29617,6 @@ html {
 /* ==========================================================================
    Video Button shortcode end styles
    ========================================================================== */
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-core/assets/css/shortcodes-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -29488,8 +29802,6 @@ html {
     clear: both;
   }
 }
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-instagram-feed/assets/css/shortcodes-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -29692,8 +30004,6 @@ aside.mkdf-sidebar .widget.widget_mkdf_instagram_widget .mkdf-widget-title,
 /* ==========================================================================
    Instagram widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-instagram-feed/assets/css/widget-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -29856,8 +30166,6 @@ aside.mkdf-sidebar .widget.widget_mkdf_instagram_widget .mkdf-widget-title,
 .mkdf-twitter-list-holder .mkdf-twitter-profile a:hover {
   color: rgba(0, 0, 0, 0.9);
 }
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-twitter-feed/assets/css/shortcodes-map.css.map */
 /* ==========================================================================
    Global partials
    ========================================================================== */
@@ -29963,5 +30271,3 @@ aside.mkdf-sidebar .widget.widget_mkdf_instagram_widget .mkdf-widget-title,
 /* ==========================================================================
    Twitter widget style - end
    ========================================================================== */
-
-/*# sourceMappingURL=../../../../plugins/backpacktraveler-twitter-feed/assets/css/widgets-map.css.map */

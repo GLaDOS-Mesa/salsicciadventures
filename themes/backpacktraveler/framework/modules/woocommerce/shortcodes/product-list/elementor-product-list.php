@@ -446,4 +446,4 @@ class BackpackTravelerCoreElementorProductList extends \Elementor\Widget_Base {
     }
 }
 
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new BackpackTravelerCoreElementorProductList() );
+backpacktraveler_mikado_register_new_elementor_widget( new BackpackTravelerCoreElementorProductList() );

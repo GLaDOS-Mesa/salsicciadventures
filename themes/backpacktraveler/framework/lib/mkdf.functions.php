@@ -246,26 +246,32 @@ if ( ! function_exists( 'backpacktraveler_mikado_get_attachment_id_from_url' ) )
 	function backpacktraveler_mikado_get_attachment_id_from_url( $attachment_url ) {
 		global $wpdb;
 		$attachment_id = '';
-		
+
 		//is attachment url set?
 		if ( $attachment_url !== '' ) {
 			//prepare query
-			
 			$query = $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE guid=%s", $attachment_url );
-			
+
 			//get attachment id
 			$attachment_id = $wpdb->get_var( $query );
 
 			// Additional check for undefined reason when guid is not image src
 			if ( empty( $attachment_id ) ) {
-				$modified_url = substr( $attachment_url, strrpos( $attachment_url, '/' ) + 1 );
-				$query = $wpdb->prepare( "SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key='_wp_attached_file' AND meta_value LIKE %s", '%' . $modified_url . '%' );
 
-				//get attachment id
-				$attachment_id = $wpdb->get_var( $query );
+				// Skip if image is from theme folder ( ex. logo.png )
+				$theme_folder_name      = substr( get_template_directory(), strrpos( get_template_directory(), '/' ) + 1 );
+				$check_theme_files_urls = strpos( $attachment_url, $theme_folder_name . '/assets/img' );
+
+				if ( false === $check_theme_files_urls ) {
+					$modified_url = substr( $attachment_url, strrpos( $attachment_url, '/' ) + 1 );
+					$query        = $wpdb->prepare( "SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key='_wp_attached_file' AND meta_value LIKE %s", '%' . $modified_url . '%' );
+
+					//get attachment id
+					$attachment_id = $wpdb->get_var( $query );
+				}
 			}
 		}
-		
+
 		//return id
 		return $attachment_id;
 	}
@@ -416,6 +422,19 @@ if ( ! function_exists( 'backpacktraveler_mikado_is_native_font' ) ) {
 	}
 }
 
+
+if ( ! function_exists( 'backpacktraveler_mikado_disable_google_font' ) ) {
+	/**
+	 * Function that remove Google fonts loading
+	 *
+	 * @return bool
+	 */
+	function backpacktraveler_mikado_disable_google_font() {
+		return 'no' !== backpacktraveler_mikado_options()->getOptionValue( 'enable_google_fonts' );
+	}
+	add_filter( 'backpacktraveler_mikado_filter_enable_google_fonts', 'backpacktraveler_mikado_disable_google_font' );
+}
+
 if ( ! function_exists( 'backpacktraveler_mikado_merge_fonts' ) ) {
 	/**
 	 * Function that merge google and native fonts
@@ -430,8 +449,9 @@ if ( ! function_exists( 'backpacktraveler_mikado_merge_fonts' ) ) {
 			$native_fonts = backpacktraveler_mikado_get_native_fonts_array();
 			
 			if ( is_array( $native_fonts ) && count( $native_fonts ) ) {
-				
-				if ( backpacktraveler_mikado_core_plugin_installed() ) {
+				$is_enabled = boolval( apply_filters( 'backpacktraveler_mikado_filter_enable_google_fonts', true ) );
+
+				if ( backpacktraveler_mikado_core_plugin_installed() && $is_enabled  ) {
 					$backpacktraveler_mikado_global_fonts_array = array_merge( $native_fonts, $backpacktraveler_mikado_global_fonts_array );
 				} else {
 					$backpacktraveler_mikado_global_fonts_array = $native_fonts;
@@ -1664,7 +1684,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_return_dependency_options_array
 				}
 			}
 			
-			if ( count( array_unique( $optionsValues ) ) === 1 ) {
+			if ( is_array( $optionsValues ) && count( array_unique( $optionsValues ) ) === 1 ) {
 				if ($optionsValues[0] === true && ! $hideContainer ) {
 					$hideItem = false;
 				} else if ($optionsValues[0] === true && $hideContainer ) {

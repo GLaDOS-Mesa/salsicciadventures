@@ -683,12 +683,12 @@ div.woocommerce textarea:-ms-input-placeholder {
 .woocommerce-page .mkdf-content a.button,
 .woocommerce-page .mkdf-content a.added_to_cart,
 .woocommerce-page .mkdf-content input[type="submit"],
-.woocommerce-page .mkdf-content button[type="submit"]:not(.mkdf-search-submit),
+.woocommerce-page .mkdf-content button[type="submit"]:not(.mkdf-search-submit):not(.mkdf-onside-btn),
 .woocommerce-page .mkdf-content .wc-forward:not(.added_to_cart):not(.checkout-button),
 div.woocommerce a.button,
 div.woocommerce a.added_to_cart,
 div.woocommerce input[type="submit"],
-div.woocommerce button[type="submit"]:not(.mkdf-search-submit),
+div.woocommerce button[type="submit"]:not(.mkdf-search-submit):not(.mkdf-onside-btn),
 div.woocommerce .wc-forward:not(.added_to_cart):not(.checkout-button) {
   position: relative;
   display: inline-block;
@@ -718,12 +718,12 @@ div.woocommerce .wc-forward:not(.added_to_cart):not(.checkout-button) {
 .woocommerce-page .mkdf-content a.button:hover,
 .woocommerce-page .mkdf-content a.added_to_cart:hover,
 .woocommerce-page .mkdf-content input[type="submit"]:hover,
-.woocommerce-page .mkdf-content button[type="submit"]:not(.mkdf-search-submit):hover,
+.woocommerce-page .mkdf-content button[type="submit"]:not(.mkdf-search-submit):not(.mkdf-onside-btn):hover,
 .woocommerce-page .mkdf-content .wc-forward:not(.added_to_cart):not(.checkout-button):hover,
 div.woocommerce a.button:hover,
 div.woocommerce a.added_to_cart:hover,
 div.woocommerce input[type="submit"]:hover,
-div.woocommerce button[type="submit"]:not(.mkdf-search-submit):hover,
+div.woocommerce button[type="submit"]:not(.mkdf-search-submit):not(.mkdf-onside-btn):hover,
 div.woocommerce .wc-forward:not(.added_to_cart):not(.checkout-button):hover {
   background-color: #212121;
   border-color: #212121;
@@ -943,8 +943,8 @@ div.woocommerce a.button.added {
 /* ==========================================================================
    WooCommerce Quantity Inputs styles - begin
    ========================================================================== */
-.woocommerce-page .mkdf-content .screen-reader-text,
-div.woocommerce .screen-reader-text {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .screen-reader-text,
+div.woocommerce:not(.post-type-archive-product) .screen-reader-text {
   height: auto;
   width: auto;
   clip: unset;
@@ -962,8 +962,8 @@ div.woocommerce .screen-reader-text {
   clip-path: none;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons,
-div.woocommerce .mkdf-quantity-buttons {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -973,12 +973,12 @@ div.woocommerce .mkdf-quantity-buttons {
   box-sizing: border-box;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-input,
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus,
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-input,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-minus,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-input,
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus,
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-input,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-minus,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-plus {
   display: inline-block;
   vertical-align: middle;
   color: #565050;
@@ -988,8 +988,8 @@ div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus {
   box-sizing: border-box;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-input,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-input {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-input,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-input {
   position: relative;
   width: auto;
   padding: 0;
@@ -1002,10 +1002,10 @@ div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-input {
   font-size: 14px;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus,
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-minus,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus,
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-minus,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-plus {
   position: relative;
   right: 0;
   width: auto;
@@ -1019,37 +1019,37 @@ div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus {
   z-index: 2;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus:before,
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus:before,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-minus:before,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus:before {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus:before,
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus:before,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-minus:before,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-plus:before {
   display: none;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus:hover,
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus:hover,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-minus:hover,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus:hover {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus:hover,
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus:hover,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-minus:hover,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-plus:hover {
   color: #959595;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-plus {
   left: 33px;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus:after,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-plus:after {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-plus:after,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-plus:after {
   content: "\56";
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-minus {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-minus {
   left: 68px;
 }
 
-.woocommerce-page .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus:after,
-div.woocommerce .mkdf-quantity-buttons .mkdf-quantity-minus:after {
+.woocommerce-page:not(.post-type-archive-product) .mkdf-content .mkdf-quantity-buttons .mkdf-quantity-minus:after,
+div.woocommerce:not(.post-type-archive-product) .mkdf-quantity-buttons .mkdf-quantity-minus:after {
   content: "\55";
 }
 
@@ -3366,7 +3366,7 @@ div.woocommerce > .single-product .upsells.products .product .mkdf-pl-text-wrapp
   padding: 0;
   background-color: transparent !important;
   border: none;
-  color: #000;
+  color: #000 !important;
   font-size: 12px;
   letter-spacing: .33em;
   line-height: 2.7em;
@@ -4541,5 +4541,3 @@ div.woocommerce > .single-product .upsells.products .product .mkdf-pl-text-wrapp
 /* ==========================================================================
    WooCommerce styles - end
    ========================================================================== */
-
-/*# sourceMappingURL=../css/woocommerce.css.map */

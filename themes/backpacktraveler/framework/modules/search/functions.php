@@ -125,3 +125,129 @@ if ( ! function_exists( 'backpacktraveler_mikado_get_search_close_icon_class' ) 
 		return $classes;
 	}
 }
+
+// Block widget functions
+if ( ! function_exists( 'backpacktraveler_mikado_override_search_block_templates' ) ) {
+	/**
+	 * Function that override `core/search` block template
+	 *
+	 * @see register_block_core_search()
+	 */
+	function backpacktraveler_mikado_override_search_block_templates( $atts ) {
+		if ( ! empty( $atts ) && isset( $atts['render_callback'] ) && 'render_block_core_search' === $atts['render_callback'] && function_exists( 'styles_for_block_core_search' ) ) {
+			$atts['render_callback'] = 'backpacktraveler_mikado_render_block_core_search';
+		}
+
+		return $atts;
+	}
+
+	add_filter( 'block_type_metadata_settings', 'backpacktraveler_mikado_override_search_block_templates' );
+}
+
+if ( ! function_exists( 'backpacktraveler_mikado_render_block_core_search' ) ) {
+	/**
+	 * Function that dynamically renders the `core/search` block
+	 *
+	 * @param array $attributes - the block attributes
+	 *
+	 * @return string - the search block markup
+	 *
+	 * @see render_block_core_search()
+	 */
+	function backpacktraveler_mikado_render_block_core_search( $attributes ) {
+		static $instance_id = 0;
+
+		$attributes = wp_parse_args(
+			$attributes,
+			array(
+				'label'      => esc_html__( 'Search', 'backpacktraveler' ),
+				'buttonText' => esc_html__( 'Search', 'backpacktraveler' ),
+			)
+		);
+
+		$input_id        = 'mkdf-search-form-' . ++ $instance_id;
+		$classnames      = classnames_for_block_core_search( $attributes );
+		$show_label      = ! empty( $attributes['showLabel'] );
+		$use_icon_button = ! empty( $attributes['buttonUseIcon'] );
+		$show_input      = ! ( ( ! empty( $attributes['buttonPosition'] ) && 'button-only' === $attributes['buttonPosition'] ) );
+		$show_button     = ! ( ( ! empty( $attributes['buttonPosition'] ) && 'no-button' === $attributes['buttonPosition'] ) );
+		$input_markup    = '';
+		$button_markup   = '';
+		$inline_styles   = styles_for_block_core_search( $attributes );
+		// function get_color_classes_for_block_core_search doesn't exist in wp 5.8 and below
+		$color_classes    = function_exists( 'get_color_classes_for_block_core_search' ) ? get_color_classes_for_block_core_search( $attributes ) : '';
+		$is_button_inside = ! empty( $attributes['buttonPosition'] ) && 'button-inside' === $attributes['buttonPosition'];
+		// border color classes need to be applied to the elements that have a border color
+		// function get_border_color_classes_for_block_core_search doesn't exist in wp 5.8 and below
+		$border_color_classes = function_exists( 'get_border_color_classes_for_block_core_search' ) ? get_border_color_classes_for_block_core_search( $attributes ) : '';
+
+		$label_markup = sprintf(
+			'<label for="%1$s" class="mkdf-search-form-label screen-reader-text">%2$s</label>',
+			$input_id,
+			empty( $attributes['label'] ) ? esc_html__( 'Search', 'backpacktraveler' ) : esc_html( $attributes['label'] )
+		);
+		if ( $show_label && ! empty( $attributes['label'] ) ) {
+			$label_markup = sprintf(
+				'<label for="%1$s" class="mkdf-search-form-label">%2$s</label>',
+				$input_id,
+				esc_html( $attributes['label'] )
+			);
+		}
+
+		if ( $show_input ) {
+			$input_classes = ! $is_button_inside ? $border_color_classes : '';
+			$input_markup  = sprintf(
+				'<input type="search" id="%s" class="mkdf-search-form-field %s" name="s" value="%s" placeholder="%s" %s required />',
+				$input_id,
+				esc_attr( $input_classes ),
+				esc_attr( get_search_query() ),
+				esc_attr( $attributes['placeholder'] ),
+				// key input doesn't exist in wp 5.8 and below
+				array_key_exists( 'input', $inline_styles ) ? $inline_styles['input'] : ''
+			);
+		}
+
+		if ( $show_button ) {
+			$button_internal_markup = '';
+			$button_classes         = $color_classes;
+			$button_classes         .= ! empty( $attributes['buttonPosition'] ) ? ' mkdf--' . $attributes['buttonPosition'] : '';
+
+			if ( ! $is_button_inside ) {
+				$button_classes .= ' ' . $border_color_classes;
+			}
+			if ( ! $use_icon_button ) {
+				if ( ! empty( $attributes['buttonText'] ) ) {
+					$button_internal_markup = esc_html( $attributes['buttonText'] );
+				}
+			} else {
+				$button_classes         .= ' mkdf--has-icon';
+				$button_internal_markup = '<span class="mkdf-icon-font-elegant icon_search"></span>';
+			}
+
+			$button_markup = sprintf(
+				'<button type="submit" class="mkdf-search-form-button %s" %s>%s</button>',
+				esc_attr( $button_classes ),
+				// key button doesn't exist in wp 5.8 and below
+				array_key_exists( 'button', $inline_styles ) ? $inline_styles['button'] : '',
+				$button_internal_markup
+			);
+		}
+
+		$field_markup_classes = $is_button_inside ? $border_color_classes : '';
+		$field_markup         = sprintf(
+			'<div class="mkdf-search-form-inner %s"%s>%s</div>',
+			$field_markup_classes,
+			$inline_styles['wrapper'],
+			$input_markup . $button_markup
+		);
+		$classnames           .= ' mkdf-search-form';
+		$wrapper_attributes   = get_block_wrapper_attributes( array( 'class' => $classnames ) );
+
+		return sprintf(
+			'<form role="search" method="get" %s action="%s">%s</form>',
+			$wrapper_attributes,
+			esc_url( home_url( '/' ) ),
+			$label_markup . $field_markup
+		);
+	}
+}

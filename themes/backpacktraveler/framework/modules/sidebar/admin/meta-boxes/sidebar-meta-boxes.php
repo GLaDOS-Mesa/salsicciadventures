@@ -28,7 +28,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_map_sidebar_meta' ) ) {
 		);
 		
 		$mkdf_custom_sidebars = backpacktraveler_mikado_get_custom_sidebars();
-		if ( count( $mkdf_custom_sidebars ) > 0 ) {
+		if ( is_array( $mkdf_custom_sidebars ) && count( $mkdf_custom_sidebars ) > 0 ) {
 			backpacktraveler_mikado_create_meta_box_field(
 				array(
 					'name'        => 'mkdf_custom_sidebar_area_meta',

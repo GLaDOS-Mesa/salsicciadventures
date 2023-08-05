@@ -538,4 +538,4 @@ class BackpackTravelerCoreElementorProductListCarousel extends \Elementor\Widget
     }
 }
 
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new BackpackTravelerCoreElementorProductListCarousel() );
+backpacktraveler_mikado_register_new_elementor_widget( new BackpackTravelerCoreElementorProductListCarousel() );

@@ -28,7 +28,7 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 							'type'        => 'dropdown',
 							'param_name'  => 'number_of_columns',
 							'heading'     => esc_html__( 'Number of Columns', 'backpacktraveler' ),
-							'value'       => array_flip( backpacktraveler_mikado_get_number_of_columns_array( true ) ),
+							'value'       => array_flip( backpacktraveler_mikado_get_number_of_columns_array( true, array( 'one' ) ) ),
 							'description' => esc_html__( 'Default value is Three', 'backpacktraveler' ),
 							'save_always' => true
 						),

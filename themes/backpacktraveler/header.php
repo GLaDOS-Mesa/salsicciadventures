@@ -14,6 +14,10 @@
 	wp_head(); ?>
 </head>
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<?php 	// Hook to include default WordPress hooks after body tag open
+	if ( function_exists( 'wp_body_open' ) ) {
+		wp_body_open();
+	} ?>
 	<?php
 	/**
 	 * backpacktraveler_mikado_action_after_body_tag hook
