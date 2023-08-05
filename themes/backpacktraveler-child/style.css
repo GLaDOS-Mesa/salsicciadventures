@@ -80,13 +80,20 @@ Template: backpacktraveler
 }
 
 /* Increase space between row/sections in blog posts */
-.mkdf-blog-holder .vc_row {
-	margin-top: 20px;
-	margin-bottom: 20px;
+.mkdf-blog-holder .vc_row, 
+.mkdf-blog-holder .wpb_single_image, 
+.mkdf-blog-holder .mkdf-image-gallery {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 /* hide author box from Destination page */
 .mkdf-destination-single-holder .mkdf-destination-info-bottom,
 .mkdf-destination-single-holder .mkdf-author-description {
+	display: none !important;
+}
+
+/* remove "see articles" butotn from Destination sidebar */
+.mkdf-single-destination-sidebar .mkdf-destination-sidebar-button {
 	display: none !important;
 }
