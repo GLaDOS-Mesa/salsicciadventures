@@ -79,7 +79,14 @@ Template: backpacktraveler
     margin-top:  auto;
 }
 
-.vc_row {
+/* Increase space between row/sections in blog posts */
+.mkdf-blog-holder .vc_row {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+/* hide author box from Destination page */
+.mkdf-destination-single-holder .mkdf-destination-info-bottom,
+.mkdf-destination-single-holder .mkdf-author-description {
+	display: none !important;
 }
