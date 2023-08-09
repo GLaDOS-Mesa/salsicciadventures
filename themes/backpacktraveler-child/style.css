@@ -97,3 +97,8 @@ Template: backpacktraveler
 .mkdf-single-destination-sidebar .mkdf-destination-sidebar-button {
 	display: none !important;
 }
+
+/* bigger destination title */ 
+.mkdf-destination-single-title {
+	font-size: 80px !important;
+}
