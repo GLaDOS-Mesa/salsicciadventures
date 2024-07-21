@@ -742,7 +742,6 @@
 .mkdf-blog-list-holder.mkdf-bl-pag-standard-shortcodes .mkdf-blog-list {
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
 
@@ -923,7 +922,6 @@
 .mkdf-blog-holder.mkdf-blog-chequered article:hover .mkdf-post-info-date {
   opacity: 1;
   -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -938,7 +936,6 @@
   box-sizing: border-box;
   opacity: 0;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   font-size: 15px;
   font-style: italic;
@@ -959,7 +956,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: 0.7s;
-  -o-transition: 0.7s;
   transition: 0.7s;
   z-index: 60;
 }
@@ -979,7 +975,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -997,7 +992,6 @@
   display: table;
   vertical-align: bottom;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.65)));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
   padding: 0 38px;
   -webkit-box-sizing: border-box;
@@ -1101,13 +1095,11 @@
   opacity: 0;
   z-index: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
 .mkdf-blog-holder.mkdf-blog-masonry article .mkdf-post-image a img {
   -webkit-transition: 0.7s;
-  -o-transition: 0.7s;
   transition: 0.7s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -1592,7 +1584,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -1804,7 +1795,6 @@
   box-sizing: border-box;
   overflow: hidden;
   -webkit-transition: border-color 0.2s ease-in-out;
-  -o-transition: border-color 0.2s ease-in-out;
   transition: border-color 0.2s ease-in-out;
 }
 
@@ -1829,7 +1819,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -1964,13 +1953,11 @@
   opacity: 0;
   z-index: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
 .mkdf-blog-list-holder .mkdf-post-image a img {
   -webkit-transition: 0.7s;
-  -o-transition: 0.7s;
   transition: 0.7s;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -2301,7 +2288,6 @@
   box-sizing: border-box;
   opacity: 0;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   font-size: 15px;
   z-index: 123;
@@ -2327,7 +2313,6 @@
 .mkdf-blog-list-holder.mkdf-bl-custom .mkdf-post-image:hover + .mkdf-post-info-date {
   opacity: 1;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -2362,7 +2347,6 @@
    ========================================================================== */
 .mkdf-blog-list-holder.mkdf-bl-masonry {
   -webkit-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
   overflow: visible !important;
 }
@@ -2665,7 +2649,6 @@
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -2673,7 +2656,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: 0.7s;
-  -o-transition: 0.7s;
   transition: 0.7s;
 }
 

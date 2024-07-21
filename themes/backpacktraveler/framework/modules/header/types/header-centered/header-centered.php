@@ -13,6 +13,8 @@ class HeaderCentered extends HeaderType {
 	protected $heightOfCompleteTransparency;
 	protected $headerHeight;
 	protected $mobileHeaderHeight;
+	protected $menuAreaHeight;
+	protected $logoAreaHeight;
 	
 	/**
 	 * Sets slug property which is the same as value of option in DB

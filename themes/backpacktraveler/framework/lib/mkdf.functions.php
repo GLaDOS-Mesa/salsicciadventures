@@ -146,6 +146,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_generate_dynamic_css_and_js' ) 
 	}
 	
 	add_action( 'backpacktraveler_mikado_action_after_theme_option_save', 'backpacktraveler_mikado_generate_dynamic_css_and_js' );
+	add_action( 'backpacktraveler_core_action_after_import_completed', 'backpacktraveler_mikado_generate_dynamic_css_and_js' );
 }
 
 if ( ! function_exists( 'backpacktraveler_mikado_gallery_upload_get_images' ) ) {

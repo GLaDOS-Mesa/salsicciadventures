@@ -63,7 +63,6 @@
 .mkdf-page-header .mkdf-grid .mkdf-vertical-align-containers {
   padding: 0;
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -267,7 +266,6 @@
   height: 100%;
   width: auto;
   -webkit-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 
@@ -463,7 +461,6 @@
   opacity: 0;
   z-index: 10;
   -webkit-transition: top 0.15s ease-out;
-  -o-transition: top 0.15s ease-out;
   transition: top 0.15s ease-out;
 }
 
@@ -472,7 +469,6 @@
   overflow: visible;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
 
@@ -510,7 +506,6 @@
   text-transform: capitalize;
   letter-spacing: .02em;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -522,7 +517,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: padding 0.2s ease-in-out;
-  -o-transition: padding 0.2s ease-in-out;
   transition: padding 0.2s ease-in-out;
 }
 
@@ -531,7 +525,6 @@
   color: #f7775e;
   opacity: 0;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   position: absolute;
   left: 15px;
@@ -541,14 +534,12 @@
   position: relative;
   padding-left: 35px;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .mkdf-drop-down .second .inner ul li a:hover:before {
   opacity: 1;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 20px;
 }
@@ -690,7 +681,6 @@
   z-index: 10;
   -webkit-transform: translateZ(0);
   -webkit-transition: opacity 0.4s ease-out;
-  -o-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
   border: 1px solid #f3f3f3;
   padding: 14px 0 18px;
@@ -911,7 +901,6 @@
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
     -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
   }
   .mkdf-header-bottom .mkdf-content-inner > .mkdf-full-width,
@@ -924,7 +913,6 @@
     -ms-transform: translateY(0);
     transform: translateY(0);
     -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
   }
 }
@@ -950,7 +938,6 @@
   -webkit-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -968,7 +955,6 @@
   -webkit-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1082,7 +1068,6 @@
   -webkit-transition: -webkit-transform .2s, opacity .0s .2s;
   -webkit-transition: opacity .0s .2s, -webkit-transform .2s;
   transition: opacity .0s .2s, -webkit-transform .2s;
-  -o-transition: transform .2s, opacity .0s .2s;
   transition: transform .2s, opacity .0s .2s;
   transition: transform .2s, opacity .0s .2s, -webkit-transform .2s;
 }
@@ -1147,7 +1132,6 @@
   -webkit-transition: -webkit-transform 0.3s ease, top 0.2s ease-out, background-color 0.2s ease-out;
   -webkit-transition: top 0.2s ease-out, background-color 0.2s ease-out, -webkit-transform 0.3s ease;
   transition: top 0.2s ease-out, background-color 0.2s ease-out, -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease, top 0.2s ease-out, background-color 0.2s ease-out;
   transition: transform 0.3s ease, top 0.2s ease-out, background-color 0.2s ease-out;
   transition: transform 0.3s ease, top 0.2s ease-out, background-color 0.2s ease-out, -webkit-transform 0.3s ease;
 }
@@ -1567,7 +1551,6 @@
   background-color: currentColor;
   border-radius: 12px;
   -webkit-transition: width 0.3s ease;
-  -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
 
@@ -1873,7 +1856,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
 .mkdf-fade-push-text-right.mkdf-push-nav-right .mkdf-fullscreen-menu-holder-outer .mkdf-fullscreen-below-menu-widget-holder,
 .mkdf-fade-push-text-right.mkdf-push-nav-right .mkdf-fullscreen-menu-holder-outer .mkdf-fullscreen-above-menu-widget-holder {
   -webkit-transition: all 0.75s ease-out;
-  -o-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
   -webkit-transform: translateX(50px);
   -ms-transform: translateX(50px);
@@ -1922,7 +1904,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -ms-transform: translateY(-30px);
   transform: translateY(-30px);
   -webkit-transition: all 0.75s ease-out;
-  -o-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
 }
 
@@ -1938,7 +1919,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition: all 0.25s linear 0.1s;
-  -o-transition: all 0.25s linear 0.1s;
   transition: all 0.25s linear 0.1s;
 }
 
@@ -1950,7 +1930,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   -webkit-transition: all 0.25s linear 0.1s;
-  -o-transition: all 0.25s linear 0.1s;
   transition: all 0.25s linear 0.1s;
 }
 
@@ -2221,7 +2200,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   content: "\f105";
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
-  -o-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
@@ -2280,14 +2258,12 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .mkdf-header-vertical .mkdf-vertical-menu.mkdf-vertical-dropdown-side .second ul * {
   visibility: inherit;
   -webkit-transition: visibility 0.2s ease;
-  -o-transition: visibility 0.2s ease;
   transition: visibility 0.2s ease;
 }
 
@@ -2303,7 +2279,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   left: calc(100% + 20px);
   visibility: hidden;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -2481,7 +2456,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   height: auto;
   max-height: 100%;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -2498,7 +2472,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   z-index: 0;
   opacity: 1;
   -webkit-transition: opacity 0.5s ease, background-color 0.5s ease;
-  -o-transition: opacity 0.5s ease, background-color 0.5s ease;
   transition: opacity 0.5s ease, background-color 0.5s ease;
 }
 
@@ -2672,7 +2645,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   background-color: currentColor;
   border-radius: 12px;
   -webkit-transition: width 0.3s ease;
-  -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
 
@@ -2708,7 +2680,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -webkit-transition: transform 0.7s cubic-bezier(0.25, 1, 0.2, 1);
   -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.25, 1, 0.2, 1);
   transition: -webkit-transform 0.7s cubic-bezier(0.25, 1, 0.2, 1);
-  -o-transition: transform 0.7s cubic-bezier(0.25, 1, 0.2, 1);
   transition: transform 0.7s cubic-bezier(0.25, 1, 0.2, 1);
   transition: transform 0.7s cubic-bezier(0.25, 1, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.25, 1, 0.2, 1);
 }
@@ -2793,7 +2764,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -webkit-transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, opacity 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s;
   -webkit-transition: opacity 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, -webkit-transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s;
   transition: opacity 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, -webkit-transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s;
-  -o-transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, opacity 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s;
   transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, opacity 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s;
   transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, opacity 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s, -webkit-transform 0.45s cubic-bezier(0.2, 0.75, 0.3, 1) 0.22s;
 }
@@ -2886,7 +2856,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -webkit-transition: transform 0.2s ease-in-out;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
-  -o-transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
@@ -2920,7 +2889,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   -webkit-transition: -webkit-transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
   -webkit-transition: left 0.2s ease, right 0.2s ease, -webkit-transform 0.4s ease-in-out;
   transition: left 0.2s ease, right 0.2s ease, -webkit-transform 0.4s ease-in-out;
-  -o-transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
   transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
   transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease, -webkit-transform 0.4s ease-in-out;
 }
@@ -2954,7 +2922,6 @@ nav.mkdf-fullscreen-menu > ul > li.mkdf-active-item > a {
   transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.6s ease;
   transition: -webkit-transform 0.6s ease;
-  -o-transition: transform 0.6s ease;
   transition: transform 0.6s ease;
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
 }

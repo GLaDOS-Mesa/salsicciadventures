@@ -23,6 +23,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_add_font_awesome_icon_pack_opti
 
 class BackpackTravelerMikadoClassIconsFontAwesome implements iBackpackTravelerMikadoInterfaceIconCollection {
 	public $icons;
+	public $socialIcons;
 	public $title;
 	public $param;
 	public $styleUrl;

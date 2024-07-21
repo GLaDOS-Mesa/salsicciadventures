@@ -9,6 +9,8 @@ use BackpackTravelerMikadoNamespace\Modules\Header\Lib\HeaderType;
  * Class HeaderVertical
  */
 class HeaderVertical extends HeaderType {
+	protected $mobileHeaderHeight;
+
 	public function __construct() {
 		$this->slug = 'header-vertical';
 		

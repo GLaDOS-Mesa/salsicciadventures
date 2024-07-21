@@ -6,6 +6,7 @@ $params['title_styles'] = $this_object->getTitleStyles( $params );
 ?>
 <div class="mkdf-pli mkdf-item-space <?php echo esc_attr( $item_classes ); ?>">
 	<div class="mkdf-pli-inner">
+		<?php do_action( 'backpacktraveler_mikado_action_before_pl_image' ); ?>
 		<div class="mkdf-pli-image">
 			<?php
                 backpacktraveler_mikado_get_module_template_part( 'templates/parts/image', 'woocommerce', '', $params );

@@ -1,3 +1,34 @@
+2.10
+- Added QODE Qucik View for WooCommerce plugin as required
+- Added WordPress 6.5.3 compatibility
+- Added WooCommerce 8.8.3 compatibility
+- Updated Revolution Slider plugin to 6.7.10
+- Updated WPBakery Page Builder to 7.6
+
+2.9
+- Added QODE Wishlist for WooCommerce plugin as required
+- Added WooCommerce 8.7 compatibility
+
+2.8
+- Added WordPress 6.4.3 compatibility
+- Added WooCommerce 8.6.1 compatibility
+- Added PHP 8.2 compatibility
+- Updated BackpackTraveler Core plugin to 1.8
+- Updated Revolution Slider plugin to 6.6.20
+- Updated WPBakery Page Builder to 7.5
+- Removed BackpackTraveler Twitter Feed due to Twitter API changes
+- Removed unnecessary console.log-s
+- Fixed Destination Map js error and initialization when Google Maps Api Key not present
+- Fixed Google maps api callback function for admin maps
+- Fixed deprecated addDomListener warning
+- Improved styling for Search widget
+- Improved related posts template for destination
+- Improved styling for Filter By Price block reset button
+- Improved import to create dynamic files after import is completed
+- Prevent BackpackTraveler Woocommerce Dropdown Cart from loading on cart page
+- Included pre-packaged WordPress scripts (jquery-ui-core, jquery-ui-draggable, hoverIntent)
+- Deleted scripts because of pre-packaged inclusion (jquery.hoverIntent.min.js, jquery-ui.min.js)
+
 2.7
 - Added WooCommerce 7.4.1 compatibility
 - Added Enable Google Fonts global option

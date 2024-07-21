@@ -286,3 +286,15 @@ if ( ! function_exists( 'backpacktraveler_mikado_get_woocommerce_sale' ) ) {
 		}
 	}
 }
+
+if ( ! function_exists( 'backpacktraveler_mikado_is_qode_wishlist_for_woocommerce_installed' ) ) {
+	function backpacktraveler_mikado_is_qode_wishlist_for_woocommerce_installed() {
+		return defined( 'QODE_WISHLIST_FOR_WOOCOMMERCE_VERSION' );
+	}
+}
+
+if ( ! function_exists( 'backpacktraveler_mikado_is_qode_quick_view_for_woocommerce_installed' ) ) {
+	function backpacktraveler_mikado_is_qode_quick_view_for_woocommerce_installed() {
+		return defined( 'QODE_QUICK_VIEW_FOR_WOOCOMMERCE_VERSION' );
+	}
+}

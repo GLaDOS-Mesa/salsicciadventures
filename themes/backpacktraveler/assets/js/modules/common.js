@@ -1169,7 +1169,6 @@
 	            }
 
 	            slider.waitForImages(function () {
-	            	console.log(numberOfItems);
 		            owlSlider = slider.owlCarousel({
 			            items: numberOfItems,
 			            loop: loop,

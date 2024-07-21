@@ -12,6 +12,7 @@ class HeaderStandard extends HeaderType {
 	protected $heightOfTransparency;
 	protected $heightOfCompleteTransparency;
 	protected $headerHeight;
+	protected $menuAreaHeight;
 	protected $mobileHeaderHeight;
 	
 	/**

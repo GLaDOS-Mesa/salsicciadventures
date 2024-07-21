@@ -26,6 +26,7 @@ class BackpackTravelerMikadoClassPanel implements iBackpackTravelerMikadoInterfa
 	public $children;
 	public $title;
 	public $name;
+	public $args = array();
 	public $dependency = array();
 	
 	function __construct( $title_panel = "", $name = "", $args = array(), $dependency = array() ) {
@@ -171,6 +172,7 @@ class BackpackTravelerMikadoClassContainer implements iBackpackTravelerMikadoInt
 class BackpackTravelerMikadoClassContainerNoStyle implements iBackpackTravelerMikadoInterfaceLayoutNode, iBackpackTravelerMikadoInterfaceRender {
 	public $children;
 	public $name;
+	public $args;
 	public $dependency;
 	
 	function __construct( $name = "", $args = array(), $dependency = array() ) {

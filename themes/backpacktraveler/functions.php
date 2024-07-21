@@ -175,11 +175,13 @@ if ( ! function_exists( 'backpacktraveler_mikado_scripts' ) ) {
 		wp_enqueue_script( 'jquery-ui-accordion' );
         wp_enqueue_script( 'wp-mediaelement' );
         wp_enqueue_script( 'underscore' );
+		wp_enqueue_script( 'jquery-ui-core' );
+		wp_enqueue_script( 'jquery-ui-draggable' );
+		wp_enqueue_script( 'hoverIntent' );
 
 		// 3rd party JavaScripts that we used in our theme
 		wp_enqueue_script( 'appear', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery.appear.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'modernizr', MIKADO_ASSETS_ROOT . '/js/modules/plugins/modernizr.min.js', array( 'jquery' ), false, true );
-		wp_enqueue_script( 'hoverintent', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery.hoverIntent.min.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'jquery-plugin', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery.plugin.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'owl-carousel', MIKADO_ASSETS_ROOT . '/js/modules/plugins/owl.carousel.min.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'waypoints', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery.waypoints.min.js', array( 'jquery' ), false, true );
@@ -193,7 +195,6 @@ if ( ! function_exists( 'backpacktraveler_mikado_scripts' ) ) {
 		wp_enqueue_script( 'isotope', MIKADO_ASSETS_ROOT . '/js/modules/plugins/isotope.pkgd.min.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'packery', MIKADO_ASSETS_ROOT . '/js/modules/plugins/packery-mode.pkgd.min.js', array( 'jquery' ), false, true );
         wp_enqueue_script( 'swiper', MIKADO_ASSETS_ROOT . '/js/modules/plugins/swiper.min.js', array('jquery'), false, true );
-        wp_enqueue_script( 'jquery-ui', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery-ui.min.js', array('jquery'), false, true );
         wp_enqueue_script( 'jquery-ui-touch-punch', MIKADO_ASSETS_ROOT . '/js/modules/plugins/jquery.ui.touch-punch.min.js', array('jquery'), false, true );
 		
 		do_action( 'backpacktraveler_mikado_action_enqueue_third_party_scripts' );

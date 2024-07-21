@@ -52,7 +52,6 @@
   color: #000000;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
 

@@ -92,6 +92,7 @@
   height: 100% !important;
   padding: 9px 0 10px !important;
   border: 0 !important;
+  background-color: transparent !important;
 }
 
 .widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--has-icon span.mkdf-icon-font-elegant.icon_search {
@@ -106,8 +107,11 @@
   background-color: #000 !important;
 }
 
-.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-inside {
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-outside.mkdf--has-icon {
   background-color: transparent !important;
+}
+
+.widget_block.widget_search .mkdf-search-form-inner button.mkdf-search-form-button.mkdf--button-inside {
   border: none !important;
   height: 100% !important;
   position: absolute !important;
@@ -371,7 +375,6 @@
   cursor: pointer;
   vertical-align: middle;
   -webkit-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
 
@@ -490,14 +493,12 @@
   width: 0;
   border-bottom: 1px solid #f2f2f2;
   -webkit-transition: all 0.3s 0.2s;
-  -o-transition: all 0.3s 0.2s;
   transition: all 0.3s 0.2s;
 }
 
 .mkdf-fullscreen-search-opened .mkdf-fullscreen-search-holder .mkdf-form-holder-inner .mkdf-line {
   width: 100%;
   -webkit-transition: width 0.5s ease 0.6s;
-  -o-transition: width 0.5s ease 0.6s;
   transition: width 0.5s ease 0.6s;
 }
 
@@ -534,7 +535,6 @@
   opacity: 0;
   cursor: pointer;
   -webkit-transition: all 0.3s 0.2s;
-  -o-transition: all 0.3s 0.2s;
   transition: all 0.3s 0.2s;
 }
 
@@ -546,7 +546,6 @@
   opacity: 1;
   bottom: 40px;
   -webkit-transition: color 0.2s ease, opacity 0.2s ease-out 1.1s, bottom 0.4s ease-out 0.9s;
-  -o-transition: color 0.2s ease, opacity 0.2s ease-out 1.1s, bottom 0.4s ease-out 0.9s;
   transition: color 0.2s ease, opacity 0.2s ease-out 1.1s, bottom 0.4s ease-out 0.9s;
 }
 
@@ -699,7 +698,6 @@
   align-items: center;
   width: 43px;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -736,7 +734,6 @@
   opacity: 0;
   display: inline-block;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -764,7 +761,6 @@
   outline: none;
   cursor: pointer;
   -webkit-transition: all 0.3s 0.2s;
-  -o-transition: all 0.3s 0.2s;
   transition: all 0.3s 0.2s;
   z-index: 10;
   display: none;
@@ -785,7 +781,6 @@
   opacity: 1;
   width: 80%;
   -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 

@@ -39,7 +39,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_admin_scripts_init' ) ) {
                     wp_enqueue_script('geocomplete', get_template_directory_uri() . '/framework/admin/assets/js/jquery.geocomplete.min.js', array('jquery', 'mkdf-admin-maps'), false, true);
                 }
 
-				wp_add_inline_script('backpacktraveler-mikado-google-map-api', 'window.qodefEmptyCallback = function () {};','before');
+				wp_add_inline_script('backpacktraveler-mikado-admin-maps', 'window.qodefEmptyCallback = function () {};','before');
 			}
 		}
 

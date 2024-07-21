@@ -9,6 +9,7 @@ class BackpackTravelerMikadoClassFramework {
 	public $mkdOptions;
 	public $mkdMetaBoxes;
 	public $mkdTaxonomyOptions;
+	public $mkdDashboardOptions;
 	public $mkdUserOptions;
 	private $skin;
 	

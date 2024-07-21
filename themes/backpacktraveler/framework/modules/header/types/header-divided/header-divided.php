@@ -13,6 +13,7 @@ class HeaderDivided extends HeaderType {
 	protected $heightOfCompleteTransparency;
 	protected $headerHeight;
 	protected $mobileHeaderHeight;
+	protected $menuAreaHeight;
 	
 	/**
 	 * Sets slug property which is the same as value of option in DB

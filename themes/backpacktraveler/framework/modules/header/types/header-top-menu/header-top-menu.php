@@ -13,6 +13,8 @@ class HeaderTopMenu extends HeaderType {
 	protected $heightOfCompleteTransparency;
 	protected $headerHeight;
 	protected $mobileHeaderHeight;
+	protected $logoAreaHeight;
+	protected $menuAreaHeight;
 	
 	/**
 	 * Sets slug property which is the same as value of option in DB

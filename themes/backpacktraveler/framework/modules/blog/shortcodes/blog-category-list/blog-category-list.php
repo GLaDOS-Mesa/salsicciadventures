@@ -88,9 +88,9 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 	
 	public function render( $atts, $content = null ) {
 		$args   = array(
-			'number_of_columns'   => 'all',
+			'number_of_columns'   => 'six',
 			'space_between_items' => 'normal',
-			'number_of_items'     => '0',
+			'number_of_items'     => '6',
 			'orderby'             => 'date',
 			'order'               => 'ASC',
 			'image_proportions'   => 'full',
@@ -98,13 +98,10 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 		);
 		$params = shortcode_atts( $args, $atts );
 
-		$query_array              = $this->getQueryArray( $params );
+        $query_array              = $this->getQueryArray( $params );
         $params['query_results']  = get_terms( $query_array );
 
 		$params['holder_classes'] = $this->getHolderClasses( $params, $args );
-		$params['inner_classes'] = $this->getInnerClasses( $params );
-		$params['is_slider'] = $this->getIsSlider( $params );
-		
 		$params['image_size']     = $this->getImageSize( $params );
 		$params['title_tag']      = ! empty( $params['title_tag'] ) ? $params['title_tag'] : $args['title_tag'];
 
@@ -153,21 +150,6 @@ class BlogCategoryList implements Lib\ShortcodeInterface {
 		
 		$classes[] = ! empty( $params['number_of_columns'] ) ? 'mkdf-' . $params['number_of_columns'] . '-columns' : 'mkdf-' . $args['number_of_columns'] . '-columns';
 		$classes[] = ! empty( $params['space_between_items'] ) ? 'mkdf-' . $params['space_between_items'] . '-space' : 'mkdf-' . $args['space_between_items'] . '-space';
-		
-		return implode( ' ', $classes );
-	}
-	
-	public function getIsSlider( $params ) {
-		$isSlider = !empty( $params['number_of_columns']) && $params['number_of_columns'] === "all";
-		
-		return $isSlider;
-	}
-	public function getInnerClasses( $params ) {
-		$classes = array();
-		
-		$classes[] = $this->getIsSlider($params)
-			? 'custom-slider-inner'
-			: "clearfix";
 		
 		return implode( ' ', $classes );
 	}

@@ -593,6 +593,57 @@
 /* ==========================================================================
    Product List - Carousel shortcode responsive styles - end
    ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qwfw-wishlist-page .woocommerce-message,
+  .qwfw-wishlist-page .woocommerce-info,
+  .qwfw-wishlist-page .woocommerce-error {
+    padding: 17px 25px;
+  }
+  .qwfw-wishlist-table .qwfw-m-items.shop_table thead tr th {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qwfw-wishlist-page .woocommerce-message,
+  .qwfw-wishlist-page .woocommerce-info,
+  .qwfw-wishlist-page .woocommerce-error {
+    padding: 14px 20px;
+    line-height: 2em;
+  }
+  .qwfw-wishlist-page .woocommerce-message a,
+  .qwfw-wishlist-page .woocommerce-info a,
+  .qwfw-wishlist-page .woocommerce-error a {
+    float: none;
+    margin: 0 70% 15px 0;
+  }
+  .qwfw-wishlist-table .qwfw-m-items.shop_table th.product-name,
+  .qwfw-wishlist-table .qwfw-m-items.shop_table td.product-name {
+    width: 30%;
+  }
+  .qwfw-wishlist-table .qwfw-m-items.shop_table th.product-thumbnail, .qwfw-wishlist-table .qwfw-m-items.shop_table th.product-stock-status,
+  .qwfw-wishlist-table .qwfw-m-items.shop_table td.product-thumbnail,
+  .qwfw-wishlist-table .qwfw-m-items.shop_table td.product-stock-status {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qwfw-wishlist-table .qwfw-m-items.shop_table th.product-remove,
+  .qwfw-wishlist-table .qwfw-m-items.shop_table td.product-remove {
+    width: 20px;
+  }
+  .qwfw-wishlist-table .qwfw-m-items.shop_table th.product-name,
+  .qwfw-wishlist-table .qwfw-m-items.shop_table td.product-name {
+    width: 25%;
+    padding-right: 10px;
+  }
+  .qwfw-wishlist-table .qwfw-m-items.shop_table th.product-price,
+  .qwfw-wishlist-table .qwfw-m-items.shop_table td.product-price {
+    width: 20%;
+  }
+}
+
 /* ==========================================================================
    WooCommerce Responsive styles - end
    ========================================================================== */

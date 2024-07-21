@@ -8,6 +8,8 @@ namespace BackpackTravelerMikadoNamespace\Modules\Header\Lib;
  * Connects header module with other modules
  */
 class BackpackTravelerMikadoClassHeaderConnector {
+	public $object;
+
 	/**
 	 * @param HeaderType $object
 	 */

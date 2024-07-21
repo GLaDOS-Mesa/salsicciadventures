@@ -24,6 +24,11 @@ if ( class_exists( 'BackpackTravelerCoreClassWidget' ) ) {
         }
 
         public function widget($args, $instance) {
+	        // Prevent widgets from loading on WooCommerce cart page
+	        if ( is_cart() ) {
+		        return;
+	        }
+
             extract($args);
 
             global $woocommerce;

@@ -360,21 +360,22 @@ if ( ! function_exists( 'backpacktraveler_mikado_pl_inner_additional_tag_before'
 
 if ( ! function_exists( 'backpacktraveler_mikado_pl_inner_additional_tag_after' ) ) {
 	function backpacktraveler_mikado_pl_inner_additional_tag_after() {
-		
+
 		print '</div>';
 	}
 }
 
 if ( ! function_exists( 'backpacktraveler_mikado_pl_image_additional_tag_before' ) ) {
 	function backpacktraveler_mikado_pl_image_additional_tag_before() {
-		
+		do_action( 'backpacktraveler_mikado_action_before_pl_image' );
+
 		print '<div class="mkdf-pl-image">';
 	}
 }
 
 if ( ! function_exists( 'backpacktraveler_mikado_pl_image_additional_tag_after' ) ) {
 	function backpacktraveler_mikado_pl_image_additional_tag_after() {
-		
+
 		print '</div>';
 	}
 }

@@ -10,7 +10,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'WPBakery Visual Composer', 'backpacktraveler' ),
 				'slug'               => 'js_composer',
 				'source'             => get_template_directory() . '/includes/plugins/js_composer.zip',
-				'version'            => '6.10.0',
+				'version'            => '7.6',
 				'required'           => false,
 				'force_activation'   => false,
 				'force_deactivation' => false
@@ -26,7 +26,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'Revolution Slider', 'backpacktraveler' ),
 				'slug'               => 'revslider',
 				'source'             => get_template_directory() . '/includes/plugins/revslider.zip',
-				'version'            => '6.6.11',
+				'version'            => '6.7.10',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false
@@ -35,7 +35,7 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'name'               => esc_html__( 'BackpackTraveler Core', 'backpacktraveler' ),
 				'slug'               => 'backpacktraveler-core',
 				'source'             => get_template_directory() . '/includes/plugins/backpacktraveler-core.zip',
-				'version'            => '1.7',
+				'version'            => '1.8',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false
@@ -50,17 +50,27 @@ if ( ! function_exists( 'backpacktraveler_mikado_register_required_plugins' ) ) 
 				'force_deactivation' => false
 			),
 			array(
-				'name'               => esc_html__( 'BackpackTraveler Twitter Feed', 'backpacktraveler' ),
-				'slug'               => 'backpacktraveler-twitter-feed',
-				'source'             => get_template_directory() . '/includes/plugins/backpacktraveler-twitter-feed.zip',
-				'version'            => '1.2.3',
-				'required'           => true,
-				'force_activation'   => false,
-				'force_deactivation' => false
+				'name'     => esc_html__( 'Custom Twitter Feeds', 'backpacktraveler' ),
+				'slug'     => 'custom-twitter-feeds',
+				'required' => false,
 			),
 			array(
 				'name'     => esc_html__( 'Qi Addons for Elementor', 'backpacktraveler' ),
 				'slug'     => 'qi-addons-for-elementor',
+				'required'           => true,
+				'force_activation'   => false,
+				'force_deactivation' => false,
+			),
+			array(
+				'name'     => esc_html__( 'QODE Wishlist for WooCommerce', 'backpacktraveler' ),
+				'slug'     => 'qode-wishlist-for-woocommerce',
+				'required'           => true,
+				'force_activation'   => false,
+				'force_deactivation' => false,
+			),
+			array(
+				'name'     => esc_html__( 'QODE Quick View for WooCommerce', 'backpacktraveler' ),
+				'slug'     => 'qode-quick-view-for-woocommerce',
 				'required'           => true,
 				'force_activation'   => false,
 				'force_deactivation' => false,

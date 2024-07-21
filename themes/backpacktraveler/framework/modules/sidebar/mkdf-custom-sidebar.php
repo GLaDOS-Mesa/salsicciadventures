@@ -8,6 +8,7 @@ if ( ! class_exists( 'BackpackTravelerMikadoClassSidebar' ) ) {
 	class BackpackTravelerMikadoClassSidebar {
 		var $sidebars = array();
 		var $stored = "";
+		var $title = "";
 		
 		// load needed stuff on widget page
 		function __construct() {
